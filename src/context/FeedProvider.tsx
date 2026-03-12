@@ -11,7 +11,7 @@ import {
 } from "react";
 import type { Article, FeedData, SortOption, DateFilter } from "@/lib/types";
 import { CATEGORIES } from "@/lib/categories";
-import { FEED_DATA_PATH } from "@/lib/constants";
+import { FEED_DATA_PATH, ARTICLES_PER_PAGE } from "@/lib/constants";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useDebounce } from "@/hooks/useDebounce";
 
@@ -41,6 +41,12 @@ interface FeedContextValue {
   setSortBy: (s: SortOption) => void;
   setDateFilter: (d: DateFilter) => void;
   setShowBookmarksOnly: (b: boolean) => void;
+
+  // Pagination
+  currentPage: number;
+  totalPages: number;
+  paginatedArticles: Article[];
+  setCurrentPage: (page: number) => void;
 
   // Bookmarks
   bookmarks: Set<string>;
@@ -127,6 +133,7 @@ export function FeedProvider({ children }: { children: ReactNode }) {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const debouncedSearch = useDebounce(searchQuery, 250);
   const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
@@ -135,7 +142,13 @@ export function FeedProvider({ children }: { children: ReactNode }) {
   const handleSetCategory = useCallback((cat: string | null) => {
     setCurrentCategory(cat);
     setCurrentFilter(null);
+    setCurrentPage(1);
   }, []);
+
+  // Reset page when any filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [currentFilter, debouncedSearch, dateFilter, showBookmarksOnly, sortBy]);
 
   // Fetch feed data
   useEffect(() => {
@@ -217,6 +230,14 @@ export function FeedProvider({ children }: { children: ReactNode }) {
     sortBy,
   ]);
 
+  // Pagination derived values
+  const totalPages = Math.max(1, Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE));
+
+  const paginatedArticles = useMemo(() => {
+    const start = (currentPage - 1) * ARTICLES_PER_PAGE;
+    return filteredArticles.slice(start, start + ARTICLES_PER_PAGE);
+  }, [filteredArticles, currentPage]);
+
   const value: FeedContextValue = useMemo(
     () => ({
       articles,
@@ -238,6 +259,11 @@ export function FeedProvider({ children }: { children: ReactNode }) {
       setDateFilter,
       setShowBookmarksOnly,
 
+      currentPage,
+      totalPages,
+      paginatedArticles,
+      setCurrentPage,
+
       bookmarks,
       toggleBookmark,
       isBookmarked,
@@ -257,6 +283,9 @@ export function FeedProvider({ children }: { children: ReactNode }) {
       dateFilter,
       showBookmarksOnly,
       handleSetCategory,
+      currentPage,
+      totalPages,
+      paginatedArticles,
       bookmarks,
       toggleBookmark,
       isBookmarked,

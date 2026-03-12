@@ -4,6 +4,7 @@ import { useFeed } from "@/context/FeedProvider";
 import { ArticleRow } from "@/components/ArticleCard";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle, Inbox } from "lucide-react";
+import { ARTICLES_PER_PAGE } from "@/lib/constants";
 
 // ---- skeleton loader -------------------------------------------------------
 
@@ -26,7 +27,7 @@ function SkeletonTable() {
 // ---- main component --------------------------------------------------------
 
 export function ArticlesGrid() {
-  const { filteredArticles, loading, error } = useFeed();
+  const { filteredArticles, paginatedArticles, currentPage, loading, error } = useFeed();
 
   if (loading) {
     return <SkeletonTable />;
@@ -69,8 +70,8 @@ export function ArticlesGrid() {
       </div>
 
       {/* Rows */}
-      {filteredArticles.map((article, i) => (
-        <ArticleRow key={article.link} article={article} index={i} />
+      {paginatedArticles.map((article, i) => (
+        <ArticleRow key={article.link} article={article} index={i + (currentPage - 1) * ARTICLES_PER_PAGE} />
       ))}
     </div>
   );

@@ -27,6 +27,9 @@ export const DEFAULT_BLOG_COLOR = {
 export const FEED_DATA_PATH =
   (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/data/feeds.json";
 
+/** Number of articles per page */
+export const ARTICLES_PER_PAGE = 30;
+
 /** localStorage keys */
 export const STORAGE_KEYS = {
   BOOKMARKS: "ghfeed-bookmarks",
