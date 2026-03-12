@@ -1,43 +1,11 @@
 "use client";
 
-import { useMemo } from "react";
 import type { Article } from "@/lib/types";
 import { useFeed } from "@/context/FeedProvider";
+import { cn } from "@/lib/utils";
+import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR, BLOG_TAG_COLORS } from "@/lib/constants";
 import { Star, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
-
-// ── Tag color palette for categories ──
-const CATEGORY_COLORS: Record<string, string> = {
-  Platform: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  Engineering: "bg-orange-500/20 text-orange-400 border-orange-500/30",
-  Security: "bg-red-500/20 text-red-400 border-red-500/30",
-  "AI & Copilot": "bg-violet-500/20 text-violet-400 border-violet-500/30",
-  "Open Source": "bg-teal-500/20 text-teal-400 border-teal-500/30",
-  Community: "bg-pink-500/20 text-pink-400 border-pink-500/30",
-  "Developer Tools": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-  Microsoft: "bg-sky-500/20 text-sky-400 border-sky-500/30",
-  Videos: "bg-rose-500/20 text-rose-400 border-rose-500/30",
-};
-const DEFAULT_CATEGORY_COLOR = "bg-gray-500/20 text-gray-400 border-gray-500/30";
-
-// ── Tag color palette for blog sources ──
-const BLOG_TAG_COLORS: Record<string, string> = {
-  "github-blog": "text-blue-400",
-  "github-changelog": "text-green-400",
-  "github-engineering": "text-orange-400",
-  "github-security": "text-red-400",
-  "github-ai": "text-violet-400",
-  "github-opensource": "text-teal-400",
-  "github-community": "text-pink-400",
-  "github-education": "text-amber-400",
-  "vscode-blog": "text-cyan-400",
-  "github-cli": "text-indigo-400",
-  "github-desktop": "text-lime-400",
-  "ms-devblogs": "text-sky-400",
-  "ms-learn": "text-emerald-400",
-  "github-youtube": "text-rose-400",
-  "vscode-youtube": "text-fuchsia-400",
-};
 
 function timeAgo(published: string): string {
   const now = Date.now();
@@ -58,7 +26,7 @@ function timeAgo(published: string): string {
 
 function getDomain(url: string): string {
   try {
-    return new URL(url).hostname.replace(/^www\\./, "");
+    return new URL(url).hostname.replace(/^www\./, "");
   } catch {
     return "";
   }
@@ -80,9 +48,9 @@ interface ArticleRowProps {
 export function ArticleRow({ article, index }: ArticleRowProps) {
   const { toggleBookmark, isBookmarked } = useFeed();
   const bookmarked = isBookmarked(article.link);
-  const domain = useMemo(() => getDomain(article.link), [article.link]);
-  const ago = useMemo(() => timeAgo(article.published), [article.published]);
-  const date = useMemo(() => formatDate(article.published), [article.published]);
+  const domain = getDomain(article.link);
+  const ago = timeAgo(article.published);
+  const date = formatDate(article.published);
 
   function handleBookmark(e: React.MouseEvent) {
     e.preventDefault();
@@ -94,12 +62,11 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
     });
   }
 
-  const isEven = index % 2 === 0;
-
-  const rowBg = isEven ? "bg-transparent" : "bg-card/30";
-
   return (
-    <div className={`group flex items-center gap-1.5 sm:gap-0 mono text-xs sm:text-sm border-b border-border vercel-transition hover:bg-secondary/60 ${rowBg}`}>
+    <div className={cn(
+      "group flex items-center gap-1.5 sm:gap-0 mono text-xs sm:text-sm border-b border-border vercel-transition hover:bg-secondary/60",
+      index % 2 !== 0 && "bg-card/30",
+    )}>
       {/* Index — hidden on mobile */}
       <span className="hidden sm:block w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
         {index + 1}
@@ -107,9 +74,10 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
 
       {/* Category tag — compact on mobile */}
       <span className="shrink-0 py-2.5 sm:py-3 pl-3 sm:pl-0.5 sm:w-28">
-        <span className={`inline-block rounded border px-1.5 sm:px-2 py-0.5 text-xs font-medium truncate max-w-20 sm:max-w-full ${
-          CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR
-        }`}>
+        <span className={cn(
+          "inline-block rounded border px-1.5 sm:px-2 py-0.5 text-xs font-medium truncate max-w-20 sm:max-w-full",
+          CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
+        )}>
           {article.category || "General"}
         </span>
       </span>
@@ -135,9 +103,10 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
       </div>
 
       {/* Blog source tag */}
-      <span className={`w-32 shrink-0 truncate text-xs py-3 hidden lg:block ${
-        BLOG_TAG_COLORS[article.blogId] || "text-muted-foreground"
-      }`}>
+      <span className={cn(
+        "w-32 shrink-0 truncate text-xs py-3 hidden lg:block",
+        BLOG_TAG_COLORS[article.blogId] || "text-muted-foreground",
+      )}>
         {article.blog}
       </span>
 
@@ -163,7 +132,7 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
           aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
           className="text-muted-foreground vercel-transition hover:text-terminal-yellow"
         >
-          <Star className={`size-4 ${bookmarked ? "fill-terminal-yellow text-terminal-yellow" : ""}`} />
+          <Star className={cn("size-4", bookmarked && "fill-terminal-yellow text-terminal-yellow")} />
         </button>
       </div>
     </div>

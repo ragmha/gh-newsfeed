@@ -69,7 +69,5 @@ export function useBookmarks() {
     [bookmarks],
   );
 
-  const isMounted = typeof window !== "undefined";
-
-  return { bookmarks, toggleBookmark, isBookmarked, isMounted } as const;
+  return { bookmarks, toggleBookmark, isBookmarked } as const;
 }

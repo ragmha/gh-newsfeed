@@ -1,26 +1,34 @@
-/** Distinct colors for blog source tags */
-export const BLOG_COLORS: Record<string, { bg: string; text: string }> = {
-  "github-blog": { bg: "bg-blue-100 dark:bg-blue-900/40", text: "text-blue-800 dark:text-blue-300" },
-  "github-changelog": { bg: "bg-green-100 dark:bg-green-900/40", text: "text-green-800 dark:text-green-300" },
-  "github-engineering": { bg: "bg-orange-100 dark:bg-orange-900/40", text: "text-orange-800 dark:text-orange-300" },
-  "github-security": { bg: "bg-red-100 dark:bg-red-900/40", text: "text-red-800 dark:text-red-300" },
-  "github-ai": { bg: "bg-violet-100 dark:bg-violet-900/40", text: "text-violet-800 dark:text-violet-300" },
-  "github-opensource": { bg: "bg-teal-100 dark:bg-teal-900/40", text: "text-teal-800 dark:text-teal-300" },
-  "github-community": { bg: "bg-pink-100 dark:bg-pink-900/40", text: "text-pink-800 dark:text-pink-300" },
-  "github-education": { bg: "bg-amber-100 dark:bg-amber-900/40", text: "text-amber-800 dark:text-amber-300" },
-  "vscode-blog": { bg: "bg-cyan-100 dark:bg-cyan-900/40", text: "text-cyan-800 dark:text-cyan-300" },
-  "github-cli": { bg: "bg-indigo-100 dark:bg-indigo-900/40", text: "text-indigo-800 dark:text-indigo-300" },
-  "github-desktop": { bg: "bg-lime-100 dark:bg-lime-900/40", text: "text-lime-800 dark:text-lime-300" },
-  "ms-devblogs": { bg: "bg-sky-100 dark:bg-sky-900/40", text: "text-sky-800 dark:text-sky-300" },
-  "ms-learn": { bg: "bg-emerald-100 dark:bg-emerald-900/40", text: "text-emerald-800 dark:text-emerald-300" },
-  "github-youtube": { bg: "bg-rose-100 dark:bg-rose-900/40", text: "text-rose-800 dark:text-rose-300" },
-  "vscode-youtube": { bg: "bg-fuchsia-100 dark:bg-fuchsia-900/40", text: "text-fuchsia-800 dark:text-fuchsia-300" },
+/** Category badge colors (bg + text + border) */
+export const CATEGORY_COLORS: Record<string, string> = {
+  Platform: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  Engineering: "bg-orange-500/20 text-orange-400 border-orange-500/30",
+  Security: "bg-red-500/20 text-red-400 border-red-500/30",
+  "AI & Copilot": "bg-violet-500/20 text-violet-400 border-violet-500/30",
+  "Open Source": "bg-teal-500/20 text-teal-400 border-teal-500/30",
+  Community: "bg-pink-500/20 text-pink-400 border-pink-500/30",
+  "Developer Tools": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
+  Microsoft: "bg-sky-500/20 text-sky-400 border-sky-500/30",
+  Videos: "bg-rose-500/20 text-rose-400 border-rose-500/30",
 };
+export const DEFAULT_CATEGORY_COLOR = "bg-gray-500/20 text-gray-400 border-gray-500/30";
 
-/** Fallback color for unknown blog sources */
-export const DEFAULT_BLOG_COLOR = {
-  bg: "bg-gray-100 dark:bg-gray-800",
-  text: "text-gray-800 dark:text-gray-300",
+/** Blog source text colors (used in table rows) */
+export const BLOG_TAG_COLORS: Record<string, string> = {
+  "github-blog": "text-blue-400",
+  "github-changelog": "text-green-400",
+  "github-engineering": "text-orange-400",
+  "github-security": "text-red-400",
+  "github-ai": "text-violet-400",
+  "github-opensource": "text-teal-400",
+  "github-community": "text-pink-400",
+  "github-education": "text-amber-400",
+  "vscode-blog": "text-cyan-400",
+  "github-cli": "text-indigo-400",
+  "github-desktop": "text-lime-400",
+  "ms-devblogs": "text-sky-400",
+  "ms-learn": "text-emerald-400",
+  "github-youtube": "text-rose-400",
+  "vscode-youtube": "text-fuchsia-400",
 };
 
 /** Path to the pre-built feed data */

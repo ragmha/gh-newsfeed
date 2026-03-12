@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useFeed } from "@/context/FeedProvider";
 import { useTheme } from "@/hooks/useTheme";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Search, Star, Sun, Moon, Rss, TrendingUp } from "lucide-react";
 
@@ -93,9 +94,9 @@ export function Header() {
 
         {/* Stats */}
         <div className="hidden md:flex items-center gap-1.5 mono text-xs">
-          <TrendingUp className="size-4 terminal-green" />
+          <TrendingUp className="size-4 text-terminal-green" />
           <span className="text-muted-foreground">
-            <span className="terminal-green">{filteredArticles.length}</span>
+            <span className="text-terminal-green">{filteredArticles.length}</span>
             <span className="text-muted-foreground/50">/{articles.length}</span>
           </span>
         </div>
@@ -107,11 +108,12 @@ export function Header() {
             size="icon"
             onClick={() => setShowBookmarksOnly(!showBookmarksOnly)}
             aria-label="Toggle bookmarks"
-            className={`size-8 rounded text-muted-foreground hover:text-foreground hover:bg-secondary ${
-              showBookmarksOnly ? "text-terminal-yellow bg-secondary" : ""
-            }`}
+            className={cn(
+              "size-8 rounded text-muted-foreground hover:text-foreground hover:bg-secondary",
+              showBookmarksOnly && "text-terminal-yellow bg-secondary",
+            )}
           >
-            <Star className={`size-4 ${showBookmarksOnly ? "fill-current" : ""}`} />
+            <Star className={cn("size-4", showBookmarksOnly && "fill-current")} />
           </Button>
           <Button
             variant="ghost"
@@ -137,6 +139,7 @@ export function Header() {
         <div className="relative">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
+            ref={searchRef}
             type="search"
             placeholder="Search articles ..."
             value={searchQuery}

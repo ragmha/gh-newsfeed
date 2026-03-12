@@ -1,6 +1,7 @@
 "use client";
 
 import { useFeed } from "@/context/FeedProvider";
+import { cn } from "@/lib/utils";
 import { CATEGORIES } from "@/lib/categories";
 import type { DateFilter } from "@/lib/types";
 
@@ -11,6 +12,8 @@ const DATE_TABS: { value: DateFilter; label: string }[] = [
   { value: "month", label: "30d" },
 ];
 
+const CATEGORY_NAMES = Object.keys(CATEGORIES);
+
 export function FilterBar() {
   const {
     filteredArticles,
@@ -20,8 +23,6 @@ export function FilterBar() {
     setDateFilter,
   } = useFeed();
 
-  const categoryNames = Object.keys(CATEGORIES);
-
   return (
     <div className="border-b border-border bg-card/50">
       <div className="flex flex-col sm:flex-row sm:items-center px-3 sm:px-4">
@@ -29,25 +30,27 @@ export function FilterBar() {
         <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider overflow-x-auto">
           <button
             onClick={() => setCurrentCategory(null)}
-            className={`shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition ${
+            className={cn(
+              "shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition",
               !currentCategory
-                ? "border-terminal-green terminal-green"
-                : "border-transparent text-muted-foreground hover:text-foreground"
-            }`}
+                ? "border-terminal-green text-terminal-green"
+                : "border-transparent text-muted-foreground hover:text-foreground",
+            )}
           >
             All
           </button>
-          {categoryNames.map((name) => (
+          {CATEGORY_NAMES.map((name) => (
             <button
               key={name}
               onClick={() =>
                 setCurrentCategory(currentCategory === name ? null : name)
               }
-              className={`shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition ${
+              className={cn(
+                "shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition",
                 currentCategory === name
-                  ? "border-terminal-green terminal-green"
-                  : "border-transparent text-muted-foreground hover:text-foreground"
-              }`}
+                  ? "border-terminal-green text-terminal-green"
+                  : "border-transparent text-muted-foreground hover:text-foreground",
+              )}
             >
               {name}
             </button>
@@ -63,11 +66,12 @@ export function FilterBar() {
             <button
               key={tab.value}
               onClick={() => setDateFilter(tab.value)}
-              className={`px-2.5 py-2.5 border-b-2 vercel-transition ${
+              className={cn(
+                "px-2.5 py-2.5 border-b-2 vercel-transition",
                 dateFilter === tab.value
-                  ? "border-terminal-cyan terminal-cyan"
-                  : "border-transparent text-muted-foreground hover:text-foreground"
-              }`}
+                  ? "border-terminal-cyan text-terminal-cyan"
+                  : "border-transparent text-muted-foreground hover:text-foreground",
+              )}
             >
               {tab.label}
             </button>

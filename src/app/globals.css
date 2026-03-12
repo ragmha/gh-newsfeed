@@ -156,7 +156,7 @@
   }
 }
 
-/* ─── Terminal utilities ─── */
+/* ─── Utilities ─── */
 @layer utilities {
   .surface-elevated {
     background-color: var(--card);
@@ -167,37 +167,7 @@
     font-family: var(--font-geist-mono), ui-monospace, monospace;
   }
 
-  .font-serif {
-    font-family: var(--font-serif), "Playfair Display", "Georgia", "Times New Roman", serif;
-  }
-
   .vercel-transition {
     transition: all 0.15s ease;
-  }
-
-  .hover-border-foreground {
-    transition: border-color 0.15s ease;
-  }
-  .hover-border-foreground:hover {
-    border-color: var(--foreground);
-  }
-
-  .terminal-green {
-    color: var(--terminal-green);
-  }
-  .terminal-red {
-    color: var(--terminal-red);
-  }
-  .terminal-cyan {
-    color: var(--terminal-cyan);
-  }
-  .terminal-yellow {
-    color: var(--terminal-yellow);
-  }
-  .bg-terminal-green {
-    background-color: var(--terminal-green);
-  }
-  .bg-terminal-red {
-    background-color: var(--terminal-red);
   }
 }

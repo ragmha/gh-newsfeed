@@ -297,8 +297,6 @@ export function FeedProvider({ children }: { children: ReactNode }) {
   return <FeedContext.Provider value={value}>{children}</FeedContext.Provider>;
 }
 
-export { FeedContext };
-
 export function useFeed(): FeedContextValue {
   const ctx = useContext(FeedContext);
   if (!ctx) {
