@@ -22,8 +22,9 @@ function getSnapshot(): Set<string> {
   return cachedSet;
 }
 
+const SERVER_SNAPSHOT: Set<string> = new Set<string>();
 function getServerSnapshot(): Set<string> {
-  return new Set<string>();
+  return SERVER_SNAPSHOT;
 }
 
 const subscribers = new Set<() => void>();
