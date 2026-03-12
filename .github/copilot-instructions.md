@@ -50,7 +50,8 @@ scripts/
 ├── agentic-workflows/
 │   └── daily-summary.md    # gh-aw: AI daily digest → creates GitHub issue
 └── workflows/
-    └── fetch-feeds.yml     # Daily cron: fetch RSS → build → deploy to GH Pages
+    ├── ci.yml              # Push/PR: lint, type-check, build, E2E tests
+    └── deploy.yml          # Push to main + daily cron: fetch RSS → build → deploy to GH Pages
 ```
 
 ## Key Patterns
