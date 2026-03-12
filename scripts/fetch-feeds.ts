@@ -45,11 +45,6 @@ const FEEDS: Record<string, FeedSource> = {
     url: "https://github.blog/changelog/feed/",
     category: "Platform",
   },
-  "github-product": {
-    name: "GitHub Product",
-    url: "https://github.blog/category/product/feed/",
-    category: "Platform",
-  },
   // Engineering
   "github-engineering": {
     name: "GitHub Engineering",
@@ -59,30 +54,30 @@ const FEEDS: Record<string, FeedSource> = {
   // Security
   "github-security": {
     name: "GitHub Security",
-    url: "https://github.blog/category/security/feed/",
+    url: "https://github.blog/security/feed/",
     category: "Security",
   },
   // AI & Copilot
   "github-ai": {
     name: "AI & ML / Copilot",
-    url: "https://github.blog/category/ai-and-ml/feed/",
+    url: "https://github.blog/ai-and-ml/feed/",
     category: "AI & Copilot",
   },
   // Open Source
   "github-opensource": {
     name: "Open Source",
-    url: "https://github.blog/category/open-source/feed/",
+    url: "https://github.blog/open-source/feed/",
     category: "Open Source",
   },
   // Community
   "github-community": {
-    name: "The ReadME Project",
-    url: "https://github.blog/category/community/feed/",
+    name: "News & Insights",
+    url: "https://github.blog/news-insights/feed/",
     category: "Community",
   },
   "github-education": {
-    name: "GitHub Education",
-    url: "https://github.blog/category/education/feed/",
+    name: "Developer Skills",
+    url: "https://github.blog/developer-skills/feed/",
     category: "Community",
   },
   // Developer Tools

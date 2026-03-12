@@ -1,59 +1,74 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 import { STORAGE_KEYS } from "@/lib/constants";
 
-function loadBookmarks(): Set<string> {
-  if (typeof window === "undefined") return new Set();
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.BOOKMARKS);
-    return raw ? new Set(JSON.parse(raw) as string[]) : new Set();
-  } catch {
-    return new Set();
+// Cached snapshot to ensure referential stability for useSyncExternalStore
+let cachedRaw: string | null = null;
+let cachedSet: Set<string> = new Set();
+
+function getSnapshot(): Set<string> {
+  const raw = typeof window === "undefined"
+    ? null
+    : localStorage.getItem(STORAGE_KEYS.BOOKMARKS);
+  if (raw !== cachedRaw) {
+    cachedRaw = raw;
+    try {
+      cachedSet = raw ? new Set(JSON.parse(raw) as string[]) : new Set();
+    } catch {
+      cachedSet = new Set();
+    }
   }
+  return cachedSet;
+}
+
+function getServerSnapshot(): Set<string> {
+  return new Set<string>();
+}
+
+const subscribers = new Set<() => void>();
+function subscribe(cb: () => void) {
+  subscribers.add(cb);
+  return () => subscribers.delete(cb);
+}
+
+function notifySubscribers() {
+  // Invalidate cache so next getSnapshot reads fresh data
+  cachedRaw = null;
+  subscribers.forEach((cb) => cb());
 }
 
 export function useBookmarks() {
-  const [bookmarks, setBookmarks] = useState<Set<string>>(new Set);
-  const [isMounted, setIsMounted] = useState(false);
-
-  // Hydrate from localStorage after mount
-  useEffect(() => {
-    setBookmarks(loadBookmarks());
-    setIsMounted(true);
-  }, []);
-
-  const persist = useCallback((next: Set<string>) => {
-    try {
-      localStorage.setItem(
-        STORAGE_KEYS.BOOKMARKS,
-        JSON.stringify([...next]),
-      );
-    } catch {
-      // Storage full or unavailable — silently ignore
-    }
-  }, []);
+  const bookmarks = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggleBookmark = useCallback(
     (link: string) => {
-      setBookmarks((prev) => {
-        const next = new Set(prev);
-        if (next.has(link)) {
-          next.delete(link);
-        } else {
-          next.add(link);
-        }
-        persist(next);
-        return next;
-      });
+      const current = getSnapshot();
+      const next = new Set(current);
+      if (next.has(link)) {
+        next.delete(link);
+      } else {
+        next.add(link);
+      }
+      try {
+        localStorage.setItem(
+          STORAGE_KEYS.BOOKMARKS,
+          JSON.stringify([...next]),
+        );
+      } catch {
+        // Storage full or unavailable
+      }
+      notifySubscribers();
     },
-    [persist],
+    [],
   );
 
   const isBookmarked = useCallback(
     (link: string) => bookmarks.has(link),
     [bookmarks],
   );
+
+  const isMounted = typeof window !== "undefined";
 
   return { bookmarks, toggleBookmark, isBookmarked, isMounted } as const;
 }

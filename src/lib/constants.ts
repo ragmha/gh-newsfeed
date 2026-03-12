@@ -2,7 +2,6 @@
 export const BLOG_COLORS: Record<string, { bg: string; text: string }> = {
   "github-blog": { bg: "bg-blue-100 dark:bg-blue-900/40", text: "text-blue-800 dark:text-blue-300" },
   "github-changelog": { bg: "bg-green-100 dark:bg-green-900/40", text: "text-green-800 dark:text-green-300" },
-  "github-product": { bg: "bg-purple-100 dark:bg-purple-900/40", text: "text-purple-800 dark:text-purple-300" },
   "github-engineering": { bg: "bg-orange-100 dark:bg-orange-900/40", text: "text-orange-800 dark:text-orange-300" },
   "github-security": { bg: "bg-red-100 dark:bg-red-900/40", text: "text-red-800 dark:text-red-300" },
   "github-ai": { bg: "bg-violet-100 dark:bg-violet-900/40", text: "text-violet-800 dark:text-violet-300" },

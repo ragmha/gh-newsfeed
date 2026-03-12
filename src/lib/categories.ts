@@ -1,5 +1,5 @@
 export const CATEGORIES: Record<string, string[]> = {
-  Platform: ["github-blog", "github-changelog", "github-product"],
+  Platform: ["github-blog", "github-changelog"],
   Engineering: ["github-engineering"],
   Security: ["github-security"],
   "AI & Copilot": ["github-ai"],
