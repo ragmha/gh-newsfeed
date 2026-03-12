@@ -63,6 +63,11 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: Rebuild with base path for GitHub Pages
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /gh-newsfeed
+
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() && failure() }}

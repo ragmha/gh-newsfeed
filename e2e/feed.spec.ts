@@ -126,7 +126,9 @@ async function loadPage(page: Page) {
   await blockDigestAPI(page);
   await page.goto("/");
   // Wait for articles to render (loading skeleton disappears)
-  await page.waitForSelector("text=GitHub Copilot Gets Smarter");
+  await expect(
+    page.getByText("GitHub Copilot Gets Smarter with GPT-5"),
+  ).toBeVisible();
 }
 
 // ---------------------------------------------------------------------------
@@ -318,7 +320,9 @@ test.describe("GitHub Feed", () => {
     await interceptFeed(page);
     await blockDigestAPI(page);
     await page.goto("/");
-    await page.waitForSelector("text=GitHub Copilot Gets Smarter");
+    await expect(
+      page.getByText("GitHub Copilot Gets Smarter with GPT-5"),
+    ).toBeVisible();
 
     // The grid should use grid-cols-1 at mobile width.
     // Verify that article cards stack vertically by checking the grid container.
