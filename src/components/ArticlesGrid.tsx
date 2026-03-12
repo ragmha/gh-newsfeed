@@ -57,15 +57,15 @@ export function ArticlesGrid() {
 
   return (
     <div className="flex flex-col border border-border rounded overflow-hidden">
-      {/* Table header */}
-      <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider text-muted-foreground bg-card border-b border-border">
+      {/* Table header (desktop only) */}
+      <div className="hidden sm:flex items-center gap-0 mono text-xs uppercase tracking-wider text-muted-foreground bg-card border-b border-border">
         <span className="w-10 shrink-0 text-center py-2">#</span>
         <span className="w-28 shrink-0 py-2">Cat</span>
         <span className="flex-1 py-2">Article</span>
         <span className="w-32 shrink-0 py-2 hidden lg:block">Source</span>
         <span className="w-28 shrink-0 py-2 hidden md:block">Author</span>
         <span className="w-16 shrink-0 text-right py-2">Age</span>
-        <span className="w-24 shrink-0 text-right py-2 hidden sm:block">Date</span>
+        <span className="w-24 shrink-0 text-right py-2">Date</span>
         <span className="w-10 shrink-0" />
       </div>
 

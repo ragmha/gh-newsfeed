@@ -3,11 +3,11 @@
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="flex items-center justify-between px-4 py-3">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 px-3 sm:px-4 py-3">
         <span className="mono text-xs text-muted-foreground">
           GitHub Feed Terminal v1.0
         </span>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <a
             href="https://github.blog/"
             target="_blank"

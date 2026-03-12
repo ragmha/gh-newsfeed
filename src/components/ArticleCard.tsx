@@ -96,18 +96,18 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
 
   const isEven = index % 2 === 0;
 
+  const rowBg = isEven ? "bg-transparent" : "bg-card/30";
+
   return (
-    <div className={`group flex items-center gap-0 mono text-sm border-b border-border vercel-transition hover:bg-secondary/60 ${
-      isEven ? "bg-transparent" : "bg-card/30"
-    }`}>
-      {/* Index */}
-      <span className="w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
+    <div className={`group flex items-center gap-1.5 sm:gap-0 mono text-xs sm:text-sm border-b border-border vercel-transition hover:bg-secondary/60 ${rowBg}`}>
+      {/* Index — hidden on mobile */}
+      <span className="hidden sm:block w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
         {index + 1}
       </span>
 
-      {/* Category tag */}
-      <span className="w-28 shrink-0 py-3 px-0.5">
-        <span className={`inline-block rounded border px-2 py-0.5 text-xs font-medium truncate max-w-full ${
+      {/* Category tag — compact on mobile */}
+      <span className="shrink-0 py-2.5 sm:py-3 pl-3 sm:pl-0.5 sm:w-28">
+        <span className={`inline-block rounded border px-1.5 sm:px-2 py-0.5 text-xs font-medium truncate max-w-20 sm:max-w-full ${
           CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR
         }`}>
           {article.category || "General"}
@@ -115,7 +115,7 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
       </span>
 
       {/* Title + domain */}
-      <div className="flex-1 min-w-0 py-3 pr-3">
+      <div className="flex-1 min-w-0 py-2.5 sm:py-3 pr-2 sm:pr-3">
         <a
           href={article.link}
           target="_blank"
@@ -125,7 +125,7 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
           <span className="font-medium text-foreground truncate vercel-transition group-hover/link:text-terminal-green">
             {article.title}
           </span>
-          <ExternalLink className="size-3 shrink-0 text-muted-foreground/40 opacity-0 group-hover/link:opacity-100 vercel-transition" />
+          <ExternalLink className="size-3 shrink-0 text-muted-foreground/40 opacity-0 group-hover/link:opacity-100 vercel-transition hidden sm:inline-block" />
         </a>
         {domain && (
           <span className="ml-2 text-xs text-muted-foreground/50 hidden sm:inline">
@@ -147,17 +147,17 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
       </span>
 
       {/* Time */}
-      <span className="w-16 shrink-0 text-right tabular-nums text-muted-foreground py-3">
+      <span className="shrink-0 tabular-nums text-muted-foreground py-2.5 sm:py-3 text-right sm:w-16">
         {ago}
       </span>
 
-      {/* Date */}
+      {/* Date — hidden on mobile */}
       <span className="w-24 shrink-0 text-right tabular-nums text-muted-foreground py-3 hidden sm:block">
         {date}
       </span>
 
       {/* Bookmark */}
-      <div className="w-10 shrink-0 flex justify-center py-3">
+      <div className="shrink-0 flex justify-center py-2.5 sm:py-3 pr-2 sm:pr-0 sm:w-10">
         <button
           onClick={handleBookmark}
           aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}

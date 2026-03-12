@@ -39,7 +39,7 @@ export function Header() {
 
   return (
     <header className="border-b border-border bg-card">
-      <div className="flex items-center h-12 px-3 sm:px-4 gap-3">
+      <div className="flex items-center h-10 sm:h-12 px-3 sm:px-4 gap-2 sm:gap-3">
         {/* Logo */}
         <div className="flex items-center gap-2 shrink-0">
           <div className="flex items-center gap-1.5">
@@ -55,18 +55,18 @@ export function Header() {
             href="https://github.blog/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
+            className="px-2 sm:px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
           >
             GitHub Blog
           </a>
-          <span className="px-3 py-3 text-foreground border-b-2 border-terminal-green font-medium">
+          <span className="px-2 sm:px-3 py-3 text-foreground border-b-2 border-terminal-green font-medium">
             Feed
           </span>
           <a
             href="https://github.blog/changelog/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
+            className="px-2 sm:px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
           >
             Changelog
           </a>
@@ -141,7 +141,7 @@ export function Header() {
             placeholder="Search articles ..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="mono h-9 w-full rounded border border-border bg-background pl-8 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
+            className="mono h-10 w-full rounded border border-border bg-background pl-8 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
           />
         </div>
       </div>
