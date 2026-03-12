@@ -192,7 +192,7 @@ export function FeedProvider({ children }: { children: ReactNode }) {
           a.title.toLowerCase().includes(q) ||
           a.summary.toLowerCase().includes(q) ||
           a.blog.toLowerCase().includes(q) ||
-          a.author.toLowerCase().includes(q),
+          (a.author && a.author.toLowerCase().includes(q)),
       );
     }
 
