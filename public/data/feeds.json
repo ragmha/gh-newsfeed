@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2025-01-15T12:00:00Z",
+  "totalArticles": 6,
+  "articles": [
+    {
+      "title": "GitHub Copilot Gets Smarter with GPT-5",
+      "link": "https://github.blog/ai/copilot-gpt5",
+      "published": "2025-01-15T10:00:00Z",
+      "summary": "GitHub Copilot now leverages GPT-5 for more accurate code suggestions, improved context understanding, and multi-file awareness across your projects.",
+      "blog": "AI & Copilot",
+      "blogId": "github-ai",
+      "category": "AI & Copilot",
+      "author": "Sarah Chen"
+    },
+    {
+      "title": "New Security Advisory Database Expansion",
+      "link": "https://github.blog/security/advisory-db-expansion",
+      "published": "2025-01-14T09:00:00Z",
+      "summary": "The GitHub Advisory Database now covers over 200,000 vulnerabilities across all major ecosystems, including improved Rust and Go coverage.",
+      "blog": "GitHub Security",
+      "blogId": "github-security",
+      "category": "Security",
+      "author": "Marcus Rivera"
+    },
+    {
+      "title": "Actions Performance Improvements: 3x Faster Builds",
+      "link": "https://github.blog/engineering/actions-performance",
+      "published": "2025-01-12T14:00:00Z",
+      "summary": "We have optimized GitHub Actions runners to deliver up to 3x faster build times with improved caching and parallelism for CI/CD workflows.",
+      "blog": "GitHub Engineering",
+      "blogId": "github-engineering",
+      "category": "Engineering",
+      "author": "Priya Patel"
+    },
+    {
+      "title": "VS Code January Release Highlights",
+      "link": "https://code.visualstudio.com/updates/v1-96",
+      "published": "2025-01-10T16:00:00Z",
+      "summary": "The January release of Visual Studio Code brings sticky scroll improvements, new terminal features, and enhanced remote development support.",
+      "blog": "VS Code Blog",
+      "blogId": "vscode-blog",
+      "category": "Developer Tools",
+      "author": "João Moreno"
+    },
+    {
+      "title": "Open Source Friday: Celebrating Community Contributors",
+      "link": "https://github.blog/opensource/open-source-friday",
+      "published": "2025-01-03T11:00:00Z",
+      "summary": "This week we spotlight outstanding community contributors who are making open source projects better for everyone through documentation and mentorship.",
+      "blog": "GitHub Open Source",
+      "blogId": "github-opensource",
+      "category": "Open Source",
+      "author": "Lisa Park"
+    },
+    {
+      "title": "GitHub Universe 2024 Recap and Key Announcements",
+      "link": "https://github.blog/news/universe-2024-recap",
+      "published": "2024-12-20T08:00:00Z",
+      "summary": "A comprehensive recap of GitHub Universe 2024, covering major product launches, developer keynotes, and the roadmap for the year ahead.",
+      "blog": "The GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Thomas Dohmke"
+    }
+  ]
+}
