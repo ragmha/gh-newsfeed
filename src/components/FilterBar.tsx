@@ -1,158 +1,82 @@
 "use client";
 
-import { useMemo } from "react";
 import { useFeed } from "@/context/FeedProvider";
 import { CATEGORIES } from "@/lib/categories";
-import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import type { DateFilter } from "@/lib/types";
 
-// Readable display names for blog IDs
-const BLOG_DISPLAY_NAMES: Record<string, string> = {
-  "github-blog": "GitHub Blog",
-  "github-changelog": "Changelog",
-  "github-product": "Product",
-  "github-engineering": "Engineering",
-  "github-security": "Security",
-  "github-ai": "AI & Copilot",
-  "github-opensource": "Open Source",
-  "github-community": "Community",
-  "github-education": "Education",
-  "vscode-blog": "VS Code",
-  "github-cli": "GitHub CLI",
-  "github-desktop": "Desktop",
-};
+const DATE_TABS: { value: DateFilter; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "today", label: "Today" },
+  { value: "week", label: "7d" },
+  { value: "month", label: "30d" },
+];
 
 export function FilterBar() {
   const {
-    articles,
+    filteredArticles,
     currentCategory,
     setCurrentCategory,
-    currentFilter,
-    setCurrentFilter,
+    dateFilter,
+    setDateFilter,
   } = useFeed();
 
-  // Count articles per category (from all articles, not filtered)
-  const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = { all: articles.length };
-    for (const [category, blogIds] of Object.entries(CATEGORIES)) {
-      counts[category] = articles.filter((a) =>
-        blogIds.includes(a.blogId),
-      ).length;
-    }
-    return counts;
-  }, [articles]);
-
-  // Count articles per blog within the active category
-  const blogCounts = useMemo(() => {
-    if (!currentCategory || !CATEGORIES[currentCategory]) return {};
-    const blogIds = CATEGORIES[currentCategory];
-    const counts: Record<string, number> = {};
-    for (const blogId of blogIds) {
-      counts[blogId] = articles.filter((a) => a.blogId === blogId).length;
-    }
-    return counts;
-  }, [articles, currentCategory]);
-
   const categoryNames = Object.keys(CATEGORIES);
-  const activeBlogIds = currentCategory ? CATEGORIES[currentCategory] ?? [] : [];
-  const categoryTotal = currentCategory ? categoryCounts[currentCategory] ?? 0 : 0;
 
   return (
-    <div className="sticky top-0 z-30 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Category pills */}
-        <ScrollArea className="w-full">
-          <div className="flex items-center gap-1.5 py-3">
-            <CategoryPill
-              label="All"
-              count={categoryCounts.all}
-              active={!currentCategory}
-              onClick={() => setCurrentCategory(null)}
-            />
-            {categoryNames.map((name) => (
-              <CategoryPill
-                key={name}
-                label={name}
-                count={categoryCounts[name] ?? 0}
-                active={currentCategory === name}
-                onClick={() => setCurrentCategory(name)}
-              />
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+    <div className="border-b border-border bg-card/50 overflow-x-auto">
+      <div className="flex items-center min-w-max px-3 sm:px-4">
+        {/* Category tabs */}
+        <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider">
+          <button
+            onClick={() => setCurrentCategory(null)}
+            className={`px-3 py-2.5 border-b-2 vercel-transition ${
+              !currentCategory
+                ? "border-terminal-green terminal-green"
+                : "border-transparent text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            All
+          </button>
+          {categoryNames.map((name) => (
+            <button
+              key={name}
+              onClick={() =>
+                setCurrentCategory(currentCategory === name ? null : name)
+              }
+              className={`px-3 py-2.5 border-b-2 vercel-transition ${
+                currentCategory === name
+                  ? "border-terminal-green terminal-green"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {name}
+            </button>
+          ))}
+        </div>
 
-        {/* Blog sub-pills (only when a category is selected and has multiple blogs) */}
-        {currentCategory && activeBlogIds.length > 1 && (
-          <ScrollArea className="w-full">
-            <div className="flex items-center gap-1.5 border-t border-border/50 py-2">
-              <BlogPill
-                label={`All in ${currentCategory}`}
-                count={categoryTotal}
-                active={!currentFilter}
-                onClick={() => setCurrentFilter(null)}
-              />
-              {activeBlogIds.map((blogId) => (
-                <BlogPill
-                  key={blogId}
-                  label={BLOG_DISPLAY_NAMES[blogId] ?? blogId}
-                  count={blogCounts[blogId] ?? 0}
-                  active={currentFilter === blogId}
-                  onClick={() => setCurrentFilter(blogId)}
-                />
-              ))}
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
-        )}
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* Date range + count */}
+        <div className="flex items-center gap-0 mono text-xs">
+          {DATE_TABS.map((tab) => (
+            <button
+              key={tab.value}
+              onClick={() => setDateFilter(tab.value)}
+              className={`px-2.5 py-2.5 border-b-2 vercel-transition ${
+                dateFilter === tab.value
+                  ? "border-terminal-cyan terminal-cyan"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+          <span className="pl-3 text-muted-foreground tabular-nums">
+            {filteredArticles.length} results
+          </span>
+        </div>
       </div>
     </div>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/* Pill sub-components                                                 */
-/* ------------------------------------------------------------------ */
-
-interface PillProps {
-  label: string;
-  count: number;
-  active: boolean;
-  onClick: () => void;
-}
-
-function CategoryPill({ label, count, active, onClick }: PillProps) {
-  return (
-    <Button
-      variant={active ? "default" : "outline"}
-      size="sm"
-      onClick={onClick}
-      className="shrink-0"
-    >
-      {label}
-      <span
-        className={
-          active
-            ? "ml-1 rounded-full bg-primary-foreground/20 px-1.5 py-0.5 text-[10px] leading-none"
-            : "ml-1 rounded-full bg-muted px-1.5 py-0.5 text-[10px] leading-none text-muted-foreground"
-        }
-      >
-        {count}
-      </span>
-    </Button>
-  );
-}
-
-function BlogPill({ label, count, active, onClick }: PillProps) {
-  return (
-    <Button
-      variant={active ? "secondary" : "ghost"}
-      size="xs"
-      onClick={onClick}
-      className="shrink-0"
-    >
-      {label}
-      <span className="ml-1 text-[10px] text-muted-foreground">{count}</span>
-    </Button>
   );
 }

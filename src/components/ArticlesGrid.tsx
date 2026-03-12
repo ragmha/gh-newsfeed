@@ -1,76 +1,22 @@
 "use client";
 
-import { useMemo } from "react";
 import { useFeed } from "@/context/FeedProvider";
-import { ArticleCard } from "@/components/ArticleCard";
+import { ArticleRow } from "@/components/ArticleCard";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Separator } from "@/components/ui/separator";
 import { AlertCircle, Inbox } from "lucide-react";
-import type { Article } from "@/lib/types";
-
-// ---- date grouping helpers ------------------------------------------------
-
-function getDateGroupLabel(published: string): string {
-  const date = new Date(published);
-  const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const yesterday = new Date(today);
-  yesterday.setDate(today.getDate() - 1);
-  const weekAgo = new Date(today);
-  weekAgo.setDate(today.getDate() - 7);
-
-  const pubDay = new Date(
-    date.getFullYear(),
-    date.getMonth(),
-    date.getDate(),
-  );
-
-  if (pubDay >= today) return "Today";
-  if (pubDay >= yesterday) return "Yesterday";
-  if (pubDay >= weekAgo) return "This Week";
-
-  return date.toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
-}
-
-function groupByDate(
-  articles: Article[],
-): { label: string; articles: Article[] }[] {
-  const map = new Map<string, Article[]>();
-
-  for (const article of articles) {
-    const label = getDateGroupLabel(article.published);
-    const group = map.get(label);
-    if (group) {
-      group.push(article);
-    } else {
-      map.set(label, [article]);
-    }
-  }
-
-  return Array.from(map, ([label, articles]) => ({ label, articles }));
-}
 
 // ---- skeleton loader -------------------------------------------------------
 
-function SkeletonGrid() {
+function SkeletonTable() {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {Array.from({ length: 6 }).map((_, i) => (
-        <div key={i} className="flex flex-col gap-3 rounded-xl border p-4">
-          <div className="flex items-center gap-2">
-            <Skeleton className="h-5 w-24" />
-            <Skeleton className="ml-auto h-7 w-7 rounded-md" />
-          </div>
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-4 w-2/3" />
-          <div className="flex gap-3">
-            <Skeleton className="h-3 w-20" />
-            <Skeleton className="h-3 w-24" />
-          </div>
-          <Skeleton className="h-12 w-full" />
+    <div className="flex flex-col">
+      {Array.from({ length: 15 }).map((_, i) => (
+        <div key={i} className={`flex items-center gap-0 border-b border-border py-2 px-2 ${i % 2 === 0 ? "" : "bg-card/30"}`}>
+          <Skeleton className="w-8 h-3 rounded mr-2" />
+          <Skeleton className="w-16 h-3 rounded mr-2" />
+          <Skeleton className="flex-1 h-3 rounded mr-2" />
+          <Skeleton className="w-12 h-3 rounded mr-2" />
+          <Skeleton className="w-16 h-3 rounded" />
         </div>
       ))}
     </div>
@@ -82,31 +28,26 @@ function SkeletonGrid() {
 export function ArticlesGrid() {
   const { filteredArticles, loading, error } = useFeed();
 
-  const groups = useMemo(
-    () => groupByDate(filteredArticles),
-    [filteredArticles],
-  );
-
   if (loading) {
-    return <SkeletonGrid />;
+    return <SkeletonTable />;
   }
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center gap-3 py-16 text-center">
-        <AlertCircle className="size-10 text-destructive" />
-        <p className="text-lg font-medium">Failed to load articles</p>
-        <p className="text-sm text-muted-foreground">{error}</p>
+      <div className="flex flex-col items-center justify-center gap-3 py-20 text-center">
+        <AlertCircle className="size-8 text-terminal-red" />
+        <p className="mono text-base text-foreground">Connection Error</p>
+        <p className="mono text-sm text-muted-foreground">{error}</p>
       </div>
     );
   }
 
   if (filteredArticles.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center gap-3 py-16 text-center">
-        <Inbox className="size-10 text-muted-foreground" />
-        <p className="text-lg font-medium">No articles found</p>
-        <p className="text-sm text-muted-foreground">
+      <div className="flex flex-col items-center justify-center gap-3 py-20 text-center">
+        <Inbox className="size-8 text-muted-foreground" />
+        <p className="mono text-base text-foreground">No articles found</p>
+        <p className="mono text-sm text-muted-foreground">
           Try adjusting your filters or search query.
         </p>
       </div>
@@ -114,22 +55,22 @@ export function ArticlesGrid() {
   }
 
   return (
-    <div className="flex flex-col gap-8">
-      {groups.map((group) => (
-        <section key={group.label}>
-          <div className="mb-4 flex items-center gap-3">
-            <h2 className="shrink-0 text-sm font-semibold text-muted-foreground">
-              {group.label}
-            </h2>
-            <Separator className="flex-1" />
-          </div>
+    <div className="flex flex-col border border-border rounded overflow-hidden">
+      {/* Table header */}
+      <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider text-muted-foreground bg-card border-b border-border">
+        <span className="w-10 shrink-0 text-center py-2">#</span>
+        <span className="w-28 shrink-0 py-2">Cat</span>
+        <span className="flex-1 py-2">Article</span>
+        <span className="w-32 shrink-0 py-2 hidden lg:block">Source</span>
+        <span className="w-28 shrink-0 py-2 hidden md:block">Author</span>
+        <span className="w-16 shrink-0 text-right py-2">Age</span>
+        <span className="w-24 shrink-0 text-right py-2 hidden sm:block">Date</span>
+        <span className="w-10 shrink-0" />
+      </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {group.articles.map((article) => (
-              <ArticleCard key={article.link} article={article} />
-            ))}
-          </div>
-        </section>
+      {/* Rows */}
+      {filteredArticles.map((article, i) => (
+        <ArticleRow key={article.link} article={article} index={i} />
       ))}
     </div>
   );

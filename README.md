@@ -1,4 +1,4 @@
-# 🐙 GitHub Feed
+# � GitHub Feed
 
 Daily-updated GitHub blog aggregator hosted on GitHub Pages. Collects articles from 12+ GitHub RSS feeds and presents them in a clean, searchable interface.
 

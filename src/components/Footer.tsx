@@ -1,29 +1,28 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
-
 export function Footer() {
   return (
-    <footer className="mt-auto">
-      <Separator />
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 px-4 py-6 text-center text-sm text-muted-foreground sm:flex-row sm:justify-between sm:px-6 lg:px-8">
-        <p>
-          🐙 GitHub Feed · Updated daily via GitHub Actions ·{" "}
+    <footer className="border-t border-border">
+      <div className="flex items-center justify-between px-4 py-3">
+        <span className="mono text-xs text-muted-foreground">
+          GitHub Feed Terminal v1.0
+        </span>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://github.blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono text-xs text-terminal-cyan vercel-transition hover:text-foreground"
+          >
+            github.blog
+          </a>
           <a
             href="/data/feed.xml"
-            className="underline underline-offset-4 hover:text-foreground"
+            className="mono text-xs text-muted-foreground vercel-transition hover:text-foreground"
           >
-            📡 RSS Feed
+            RSS
           </a>
-        </p>
-        <a
-          href="https://github.com/gh-newsfeed/gh-newsfeed"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-4 hover:text-foreground"
-        >
-          View on GitHub
-        </a>
+        </div>
       </div>
     </footer>
   );

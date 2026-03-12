@@ -34,15 +34,15 @@ export function Controls() {
   } = useFeed();
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+    <div className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
       {/* Left: article count */}
-      <p className="text-sm text-muted-foreground">
+      <p className="mono text-xs text-muted-foreground">
         Showing{" "}
-        <span className="font-medium text-foreground">
+        <span className="text-foreground">
           {filteredArticles.length}
         </span>{" "}
         of{" "}
-        <span className="font-medium text-foreground">{articles.length}</span>{" "}
+        <span className="text-foreground">{articles.length}</span>{" "}
         articles
       </p>
 
@@ -52,7 +52,7 @@ export function Controls() {
           value={dateFilter}
           onValueChange={(v) => setDateFilter(v as DateFilter)}
         >
-          <SelectTrigger size="sm" className="w-[130px]">
+          <SelectTrigger size="sm" className="w-[130px] rounded-md border-border bg-secondary text-xs">
             <SelectValue placeholder="Date range" />
           </SelectTrigger>
           <SelectContent>
@@ -68,7 +68,7 @@ export function Controls() {
           value={sortBy}
           onValueChange={(v) => setSortBy(v as SortOption)}
         >
-          <SelectTrigger size="sm" className="w-[140px]">
+          <SelectTrigger size="sm" className="w-[140px] rounded-md border-border bg-secondary text-xs">
             <SelectValue placeholder="Sort by" />
           </SelectTrigger>
           <SelectContent>

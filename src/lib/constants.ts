@@ -11,6 +11,10 @@ export const BLOG_COLORS: Record<string, { bg: string; text: string }> = {
   "vscode-blog": { bg: "bg-cyan-100 dark:bg-cyan-900/40", text: "text-cyan-800 dark:text-cyan-300" },
   "github-cli": { bg: "bg-indigo-100 dark:bg-indigo-900/40", text: "text-indigo-800 dark:text-indigo-300" },
   "github-desktop": { bg: "bg-lime-100 dark:bg-lime-900/40", text: "text-lime-800 dark:text-lime-300" },
+  "ms-devblogs": { bg: "bg-sky-100 dark:bg-sky-900/40", text: "text-sky-800 dark:text-sky-300" },
+  "ms-learn": { bg: "bg-emerald-100 dark:bg-emerald-900/40", text: "text-emerald-800 dark:text-emerald-300" },
+  "github-youtube": { bg: "bg-rose-100 dark:bg-rose-900/40", text: "text-rose-800 dark:text-rose-300" },
+  "vscode-youtube": { bg: "bg-fuchsia-100 dark:bg-fuchsia-900/40", text: "text-fuchsia-800 dark:text-fuchsia-300" },
 };
 
 /** Fallback color for unknown blog sources */

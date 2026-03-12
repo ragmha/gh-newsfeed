@@ -96,6 +96,28 @@ const FEEDS: Record<string, FeedSource> = {
     url: "https://github.com/desktop/desktop/releases.atom",
     category: "Developer Tools",
   },
+  // Microsoft
+  "ms-devblogs": {
+    name: "Microsoft DevBlogs",
+    url: "https://devblogs.microsoft.com/feed/",
+    category: "Microsoft",
+  },
+  "ms-learn": {
+    name: "Microsoft Learn",
+    url: "https://learn.microsoft.com/api/search/rss?search=*&locale=en-us&$top=100",
+    category: "Microsoft",
+  },
+  // Videos
+  "github-youtube": {
+    name: "GitHub YouTube",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+    category: "Videos",
+  },
+  "vscode-youtube": {
+    name: "VS Code YouTube",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+    category: "Videos",
+  },
 };
 
 // ---------------------------------------------------------------------------
