@@ -36,7 +36,7 @@ Fetch the latest articles from all configured RSS/Atom feeds and update the feed
    - List of new article titles (up to 10)
    - Sources that had new content
 
-4. **If no new articles were found**, do nothing — skip the PR creation.
+4. **If no new articles were found**, call the `noop` tool with a message explaining that no new articles were found. Do NOT create a PR with unchanged data.
 
 ## Feed Sources
 
