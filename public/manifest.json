@@ -2,7 +2,7 @@
   "name": "GitHub News Feed",
   "short_name": "GHFeed",
   "description": "Daily updates from GitHub blogs — last 30 days",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0d1117",
   "theme_color": "#0d1117",

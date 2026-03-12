@@ -20,7 +20,8 @@ export const DEFAULT_BLOG_COLOR = {
 };
 
 /** Path to the pre-built feed data */
-export const FEED_DATA_PATH = "/data/feeds.json";
+export const FEED_DATA_PATH =
+  (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/data/feeds.json";
 
 /** localStorage keys */
 export const STORAGE_KEYS = {
