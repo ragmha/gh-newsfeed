@@ -22,7 +22,7 @@ test.describe("Feature Name", () => {
 
 ## Guidelines
 - Tests live in `e2e/` directory
-- Run with: `npx playwright test`
+- Run with: `bunx playwright test`
 - The app is a static export — tests run against a local server serving `out/`
 - Feed data comes from `public/data/feeds.json` — ensure it exists before testing
 - Use `data-testid` attributes for reliable selectors
@@ -31,8 +31,8 @@ test.describe("Feature Name", () => {
 
 ## Running Tests
 ```bash
-npx playwright install            # Install browsers (first time)
-npx playwright test               # Run all tests
-npx playwright test --ui          # Run with UI
-npx playwright test e2e/search.spec.ts  # Run specific file
+bunx playwright install            # Install browsers (first time)
+bunx playwright test               # Run all tests
+bunx playwright test --ui          # Run with UI
+bunx playwright test e2e/search.spec.ts  # Run specific file
 ```

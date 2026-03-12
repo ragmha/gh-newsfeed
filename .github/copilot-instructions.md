@@ -90,15 +90,15 @@ scripts/
 
 ## Running Locally
 ```bash
-npm install
-npx tsx scripts/fetch-feeds.ts   # Fetch RSS feeds
-npm run dev                       # Start dev server
-npm run build                     # Static export to out/
+bun install
+bunx tsx scripts/fetch-feeds.ts   # Fetch RSS feeds
+bun run dev                       # Start dev server
+bun run build                     # Static export to out/
 ```
 
 ## Testing
 ```bash
-npm run lint                      # ESLint
-npx tsc --noEmit                  # Type check
-npx playwright test               # E2E tests
+bun run lint                      # ESLint
+bunx tsc --noEmit                 # Type check
+bunx playwright test              # E2E tests
 ```

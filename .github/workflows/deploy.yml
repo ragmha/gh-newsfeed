@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: 22
+  BUN_VERSION: latest
 
 jobs:
   deploy:
@@ -30,20 +30,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
+          bun-version: ${{ env.BUN_VERSION }}
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Fetch RSS feeds
-        run: npx tsx scripts/fetch-feeds.ts
+        run: bunx tsx scripts/fetch-feeds.ts
 
       - name: Build
-        run: npm run build
+        run: bun run build
         env:
           NEXT_PUBLIC_BASE_PATH: /gh-newsfeed
 

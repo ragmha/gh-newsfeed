@@ -6,7 +6,7 @@ Add a new shadcn/ui component to the project and use it in the feed interface.
 ## Steps
 1. Install the component:
    ```bash
-   npx shadcn@latest add <component-name>
+   bunx shadcn@latest add <component-name>
    ```
    This auto-detects Tailwind v4 and places the component in `src/components/ui/`.
 

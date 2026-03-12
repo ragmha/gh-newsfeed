@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: 22
+  BUN_VERSION: latest
   PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
 
 jobs:
@@ -25,41 +25,40 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
+          bun-version: ${{ env.BUN_VERSION }}
 
       - name: Cache Playwright browsers
         id: playwright-cache
         uses: actions/cache@v5
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          key: playwright-${{ runner.os }}-${{ hashFiles('bun.lock') }}
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Install Playwright (if not cached)
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
+        run: bunx playwright install --with-deps chromium
 
       - name: Install Playwright deps (if cached)
         if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps chromium
+        run: bunx playwright install-deps chromium
 
       - name: Fetch RSS feeds
-        run: npx tsx scripts/fetch-feeds.ts
+        run: bunx tsx scripts/fetch-feeds.ts
 
       - name: Lint & type check
-        run: npm run lint && npx tsc --noEmit
+        run: bun run lint && bunx tsc --noEmit
 
       - name: Build
-        run: npm run build
+        run: bun run build
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: bunx playwright test
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v5

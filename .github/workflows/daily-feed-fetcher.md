@@ -23,7 +23,7 @@ Fetch the latest articles from all configured RSS/Atom feeds and update the feed
 
 ## Instructions
 
-1. **Run the feed fetcher script** by executing `npx tsx scripts/fetch-feeds.ts` in the repository root. This script:
+1. **Run the feed fetcher script** by executing `bunx tsx scripts/fetch-feeds.ts` in the repository root. This script:
    - Reads RSS/Atom feeds from 12+ GitHub blog sources
    - Parses and normalizes article data
    - Writes the output to `public/data/feeds.json`
@@ -59,6 +59,6 @@ The feed sources are defined in `scripts/fetch-feeds.ts`. They include:
 
 ## Important Notes
 
-- Always run `npx tsx scripts/fetch-feeds.ts` to fetch feeds — do not manually edit `feeds.json`
+- Always run `bunx tsx scripts/fetch-feeds.ts` to fetch feeds — do not manually edit `feeds.json`
 - The script handles deduplication, date sorting, and summary truncation
 - If the script fails (network errors, rate limits), report the error but do not create a PR with partial data

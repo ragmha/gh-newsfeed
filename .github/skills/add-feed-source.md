@@ -20,11 +20,11 @@ Add a new RSS/Atom feed source to the GitHub Feed aggregator.
    ```typescript
    "new-blog-id": "#hexcolor",
    ```
-4. Test by running: `npx tsx scripts/fetch-feeds.ts`
-5. Verify the new feed appears in the UI: `npm run dev`
+4. Test by running: `bunx tsx scripts/fetch-feeds.ts`
+5. Verify the new feed appears in the UI: `bun run dev`
 
 ## Validation
 - The blogId must be unique across all feeds
 - The category must exist in `CATEGORIES` or be added as a new one
 - The feed URL must return valid RSS 2.0 or Atom XML
-- Run `npx tsc --noEmit` to ensure no type errors
+- Run `bunx tsc --noEmit` to ensure no type errors

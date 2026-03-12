@@ -15,9 +15,9 @@ Daily-updated GitHub blog aggregator hosted on GitHub Pages. Collects articles f
 ## Quick Start
 
 ```bash
-npm install
-npx tsx scripts/fetch-feeds.ts   # Fetch RSS feeds
-npm run dev                       # Start dev server
+bun install
+bunx tsx scripts/fetch-feeds.ts   # Fetch RSS feeds
+bun run dev                       # Start dev server
 ```
 
 ## Deploy
