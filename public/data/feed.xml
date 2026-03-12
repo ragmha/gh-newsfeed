@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub Newsfeed</title>
+    <link>https://github.com</link>
+    <description>Aggregated news from GitHub blogs, changelogs, and related developer tools.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Mar 2026 21:27:17 GMT</lastBuildDate>
+    <atom:link href="https://gh-newsfeed.vercel.app/data/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>VS Code 1.112 Insiders</title>
+      <link>https://code.visualstudio.com/updates/v1_112</link>
+      <description>Learn what&apos;s new in Visual Studio Code 1.112 (Insiders) Read the full article</description>
+      <pubDate>Wed, 18 Mar 2026 17:00:00 GMT</pubDate>
+      <category>Developer Tools</category>
+      <source url="https://code.visualstudio.com/updates/v1_112">VS Code Blog</source>
+      <guid isPermaLink="true">https://code.visualstudio.com/updates/v1_112</guid>
+    </item>
+    <item>
+      <title>Surface Hub 3 update history - Surface Hub</title>
+      <link>https://learn.microsoft.com/en-us/surface-hub/surface-hub-3-update-history</link>
+      <description>Discover the latest updates for Surface Hub 3 running Microsoft Teams Rooms, focusing on security, performance, and compliance improvements.</description>
+      <pubDate>Thu, 12 Mar 2026 21:02:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/surface-hub/surface-hub-3-update-history">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/surface-hub/surface-hub-3-update-history</guid>
+    </item>
+    <item>
+      <title>Release notes for Microsoft Edge Security Updates</title>
+      <link>https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security</link>
+      <description>Release notes for Microsoft Edge Security Updates</description>
+      <pubDate>Thu, 12 Mar 2026 20:58:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security</guid>
+    </item>
+    <item>
+      <title>Microsoft Edge release notes for Mobile Stable Channel</title>
+      <link>https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-mobile-stable-channel</link>
+      <description>Microsoft Edge release notes for Mobile Stable Channel</description>
+      <pubDate>Thu, 12 Mar 2026 20:58:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-mobile-stable-channel">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-mobile-stable-channel</guid>
+    </item>
+    <item>
+      <title>GitHub Desktop 3.5.7-beta1</title>
+      <link>https://github.com/desktop/desktop/releases/tag/release-3.5.7-beta1</link>
+      <description>Added Add option to include a Signed-off-by trailer on commits for Developer Certificate of Origin workflows - #21741 Fixed Discard Changes now completes even when the GitHub Desktop window is not focused - #21739 Allow origin fetch on empty repo - #4574 #4575. Thanks @jackfreem! Fix window…</description>
+      <pubDate>Thu, 12 Mar 2026 20:53:53 GMT</pubDate>
+      <category>Developer Tools</category>
+      <source url="https://github.com/desktop/desktop/releases/tag/release-3.5.7-beta1">GitHub Desktop Releases</source>
+      <guid isPermaLink="true">https://github.com/desktop/desktop/releases/tag/release-3.5.7-beta1</guid>
+    </item>
+    <item>
+      <title>Share and manage agents built with Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents</link>
+      <description>Learn how to share and manage agents built with Microsoft 365 Copilot.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents</guid>
+    </item>
+    <item>
+      <title>Agent Builder in Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder</link>
+      <description>Learn how to use Microsoft 365 Copilot Agent Builder to build declarative agents.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder</guid>
+    </item>
+    <item>
+      <title>Templates for agents for Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-templates-overview</link>
+      <description>Learn how to use templates to quickly create declarative agents in Microsoft 365 Copilot.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-templates-overview">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-templates-overview</guid>
+    </item>
+    <item>
+      <title>What&apos;s New for Microsoft 365 Copilot Developers</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/whats-new</link>
+      <description>Find out what&apos;s new in Microsoft 365 Copilot extensibility, including declarative agents, custom engine agents, connectors, Copilot APIs, and more.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/whats-new">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/whats-new</guid>
+    </item>
+    <item>
+      <title>Add knowledge sources to your declarative agent in Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-add-knowledge</link>
+      <description>Learn about the different types of knowledge sources that you can add to your declarative agent when you build your agent with the Agent Builder feature in Microsoft 365 Copilot.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-add-knowledge">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-add-knowledge</guid>
+    </item>
+    <item>
+      <title>Build Agents with Agent Builder in Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-build-agents</link>
+      <description>Learn how to build agents by using the Agent Builder feature in Microsoft 365 Copilot.</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-build-agents">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-build-agents</guid>
+    </item>
+    <item>
+      <title>Add interactive UI widgets to declarative agents</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-ui-widgets</link>
+      <description>Learn how to add interactive UI widgets to MCP server-based declarative agents</description>
+      <pubDate>Thu, 12 Mar 2026 20:51:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-ui-widgets">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-ui-widgets</guid>
+    </item>
+    <item>
+      <title>Agent Registry in the Microsoft 365 admin center - Microsoft 365 admin</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry</link>
+      <description>Agent Registry in the Microsoft 365 admin center.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry</guid>
+    </item>
+    <item>
+      <title>Microsoft 365 Copilot agents admin guide</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/m365-agents-admin-guide</link>
+      <description>Learn about administering and deploying Microsoft 365 Copilot agents.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/m365-agents-admin-guide">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/m365-agents-admin-guide</guid>
+    </item>
+    <item>
+      <title>Manage Microsoft feedback for your organization - Microsoft 365 admin</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org</link>
+      <description>Manage feedback your users can send to Microsoft about Microsoft products.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org</guid>
+    </item>
+    <item>
+      <title>Customize the Employee Self-Service agent</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/employee-self-service/customize</link>
+      <description>Learn about the customization stage in the deployment process for the Employee Self-Service agent.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/employee-self-service/customize">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/employee-self-service/customize</guid>
+    </item>
+    <item>
+      <title>Deploy Copilot Studio agents</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-deploy</link>
+      <description>Learn how to deploy Copilot Studio agents.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-deploy">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-deploy</guid>
+    </item>
+    <item>
+      <title>Manage requested Copilot Studio agents</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-copilot-studio-requested</link>
+      <description>Learn how to manage requested Copilot Studio agents.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-copilot-studio-requested">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-copilot-studio-requested</guid>
+    </item>
+    <item>
+      <title>Deploy agents for Microsoft 365 Copilot</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-assign-deploy</link>
+      <description>Learn how to deploy agents for Microsoft 365 Copilot.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-assign-deploy">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-assign-deploy</guid>
+    </item>
+    <item>
+      <title>Set availability of Copilot Studio agents</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-availability</link>
+      <description>Learn how to set availability of Copilot Studio agents.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-availability">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-availability</guid>
+    </item>
+    <item>
+      <title>Manage Microsoft 365 Copilot Scenarios</title>
+      <link>https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-page</link>
+      <description>Discover how to configure Microsoft 365 Copilot scenarios in the admin center. Streamline user access, data security, and Copilot actions for your team.</description>
+      <pubDate>Thu, 12 Mar 2026 20:47:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-page">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-page</guid>
+    </item>
+    <item>
+      <title>Get Microsoft Calling Plan telephone numbers for your organization - Microsoft Teams</title>
+      <link>https://learn.microsoft.com/en-us/microsoftteams/getting-phone-numbers-for-your-users</link>
+      <description>Learn about acquiring new telephone numbers for your tenant with Microsoft Teams Calling Plans.</description>
+      <pubDate>Thu, 12 Mar 2026 20:43:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoftteams/getting-phone-numbers-for-your-users">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoftteams/getting-phone-numbers-for-your-users</guid>
+    </item>
+    <item>
+      <title>Auto attendant and Call queue historical reports - Microsoft Teams</title>
+      <link>https://learn.microsoft.com/en-us/microsoftteams/aa-cq-historical-reports</link>
+      <description>Learn how to use the Teams Auto Attendant &amp; Call Queue Historical Reports with Power BI to view Auto attendant and Call queue historical data.</description>
+      <pubDate>Thu, 12 Mar 2026 20:43:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoftteams/aa-cq-historical-reports">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoftteams/aa-cq-historical-reports</guid>
+    </item>
+    <item>
+      <title>New VDI solution for Teams - Microsoft Teams</title>
+      <link>https://learn.microsoft.com/en-us/microsoftteams/vdi-2</link>
+      <description>Learn about Teams for Virtualized Desktop Infrastructure (VDI) 2.0.</description>
+      <pubDate>Thu, 12 Mar 2026 20:43:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoftteams/vdi-2">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoftteams/vdi-2</guid>
+    </item>
+    <item>
+      <title>Release notes for Microsoft Teams - Office release notes</title>
+      <link>https://learn.microsoft.com/en-us/officeupdates/teams-admin</link>
+      <description>This article describes the release notes information about new admin features for Microsoft Teams and Teams admin center.</description>
+      <pubDate>Thu, 12 Mar 2026 20:42:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/officeupdates/teams-admin">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/officeupdates/teams-admin</guid>
+    </item>
+    <item>
+      <title>Install PowerShell on Linux - PowerShell</title>
+      <link>https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-linux</link>
+      <description>This article lists the Linux distributions and package managers that are supported for installing PowerShell.</description>
+      <pubDate>Thu, 12 Mar 2026 19:38:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-linux">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-linux</guid>
+    </item>
+    <item>
+      <title>Install PowerShell 7 on macOS - PowerShell</title>
+      <link>https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-macos</link>
+      <description>How to install PowerShell on macOS</description>
+      <pubDate>Thu, 12 Mar 2026 19:38:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-macos">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-macos</guid>
+    </item>
+    <item>
+      <title>Alternate ways to install PowerShell - PowerShell</title>
+      <link>https://learn.microsoft.com/en-us/powershell/scripting/install/alternate-install-methods</link>
+      <description>Alternate ways to install PowerShell on non-Windows platforms.</description>
+      <pubDate>Thu, 12 Mar 2026 19:38:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/powershell/scripting/install/alternate-install-methods">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/powershell/scripting/install/alternate-install-methods</guid>
+    </item>
+    <item>
+      <title>Persist add-in state and settings - Office Add-ins</title>
+      <link>https://learn.microsoft.com/en-us/office/dev/add-ins/develop/persisting-add-in-state-and-settings</link>
+      <description>Learn how to persist data in Office Web Add-in applications running in the stateless environment of a browser control.</description>
+      <pubDate>Thu, 12 Mar 2026 19:25:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/office/dev/add-ins/develop/persisting-add-in-state-and-settings">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/office/dev/add-ins/develop/persisting-add-in-state-and-settings</guid>
+    </item>
+    <item>
+      <title>Autogenerate JSON metadata for custom functions - Office Add-ins</title>
+      <link>https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-json-autogeneration</link>
+      <description>Use JSDoc tags to dynamically create your custom functions JSON metadata.</description>
+      <pubDate>Thu, 12 Mar 2026 19:25:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-json-autogeneration">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-json-autogeneration</guid>
+    </item>
+    <item>
+      <title>Use legacy Office SSO to get the identity of the signed-in user - Office Add-ins</title>
+      <link>https://learn.microsoft.com/en-us/office/dev/add-ins/develop/use-sso-to-get-office-signed-in-user-token</link>
+      <description>Call the getAccessToken API to get the ID token with name, email, and additional information about the signed-in user.</description>
+      <pubDate>Thu, 12 Mar 2026 19:25:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/office/dev/add-ins/develop/use-sso-to-get-office-signed-in-user-token">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/office/dev/add-ins/develop/use-sso-to-get-office-signed-in-user-token</guid>
+    </item>
+    <item>
+      <title>Universal Print connector version 2</title>
+      <link>https://learn.microsoft.com/en-us/universal-print/fundamentals/universal-print-connector-v2-information</link>
+      <description>Guidance about deploying connector v2.0 in your organization</description>
+      <pubDate>Thu, 12 Mar 2026 19:20:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/universal-print/fundamentals/universal-print-connector-v2-information">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/universal-print/fundamentals/universal-print-connector-v2-information</guid>
+    </item>
+    <item>
+      <title>Security Copilot Agents in Microsoft Purview overview</title>
+      <link>https://learn.microsoft.com/en-us/purview/copilot-in-purview-agents-overview</link>
+      <description>Learn about Microsoft Security Copilot agents in Microsoft Purview</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/purview/copilot-in-purview-agents-overview">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/purview/copilot-in-purview-agents-overview</guid>
+    </item>
+    <item>
+      <title>Get started with Microsoft Purview Posture Agent in Data Security Posture Management</title>
+      <link>https://learn.microsoft.com/en-us/purview/copilot-in-purview-posture-agent-get-started</link>
+      <description>Prepare for and deploy the Microsoft Purview Agents.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/purview/copilot-in-purview-posture-agent-get-started">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/purview/copilot-in-purview-posture-agent-get-started</guid>
+    </item>
+    <item>
+      <title>Catalog Enrichment Agent in Copilot Studio (preview) - Microsoft for Retail</title>
+      <link>https://learn.microsoft.com/en-us/industry/retail/catalog-enrichment-agent/overview-catalog-enrichment-agent</link>
+      <description>Learn about Catalog Enrichment Agent in Copilot Studio (preview).</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/retail/catalog-enrichment-agent/overview-catalog-enrichment-agent">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/retail/catalog-enrichment-agent/overview-catalog-enrichment-agent</guid>
+    </item>
+    <item>
+      <title>Microsoft technologies used in Microsoft for Manufacturing - Microsoft for Manufacturing</title>
+      <link>https://learn.microsoft.com/en-us/industry/manufacturing/appendix/microsoft-technology</link>
+      <description>Learn about the key Microsoft technologies and solutions supporting the implementations of Microsoft for Manufacturing scenarios.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/manufacturing/appendix/microsoft-technology">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/manufacturing/appendix/microsoft-technology</guid>
+    </item>
+    <item>
+      <title>Intelligent factories - Microsoft for Manufacturing</title>
+      <link>https://learn.microsoft.com/en-us/industry/manufacturing/enable-intelligent-factories</link>
+      <description>Use Industrial IoT, data analytics, AI, and cloud connectivity to build intelligent factories using Microsoft for Manufacturing</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/manufacturing/enable-intelligent-factories">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/manufacturing/enable-intelligent-factories</guid>
+    </item>
+    <item>
+      <title>Digital engineering - Microsoft for Manufacturing</title>
+      <link>https://learn.microsoft.com/en-us/industry/manufacturing/unlock-innovation</link>
+      <description>Evolve your technology road map to adopt capabilities like AI, mixed reality, digital twins, and edge-to-cloud using Microsoft for Manufacturing.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/manufacturing/unlock-innovation">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/manufacturing/unlock-innovation</guid>
+    </item>
+    <item>
+      <title>Resilient supply chains - Microsoft for Manufacturing</title>
+      <link>https://learn.microsoft.com/en-us/industry/manufacturing/build-supply-chain-manufacturing</link>
+      <description>Help customers build resilient and sustainable supply chains using Microsoft for Manufacturing</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/manufacturing/build-supply-chain-manufacturing">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/manufacturing/build-supply-chain-manufacturing</guid>
+    </item>
+    <item>
+      <title>Ingest data, test, and publish Personalized Shopping Agent in Copilot Studio (preview) - Microsoft for Retail</title>
+      <link>https://learn.microsoft.com/en-us/industry/retail/personal-shopping-agent/ingest-data-personal-shopping-agent</link>
+      <description>Ingest data, test, and publish Personalized Shopping Agent in Copilot Studio (preview).</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/retail/personal-shopping-agent/ingest-data-personal-shopping-agent">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/retail/personal-shopping-agent/ingest-data-personal-shopping-agent</guid>
+    </item>
+    <item>
+      <title>Optimize merchandising operations - Microsoft for Retail</title>
+      <link>https://learn.microsoft.com/en-us/industry/retail/maximize-data</link>
+      <description>Optimize merchandising operations with Microsoft for Retail.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/retail/maximize-data">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/retail/maximize-data</guid>
+    </item>
+    <item>
+      <title>Empower the new retail workforce - Microsoft for Retail</title>
+      <link>https://learn.microsoft.com/en-us/industry/retail/empower-store-associate</link>
+      <description>Empower the new retail workforce with Microsoft for Retail.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/retail/empower-store-associate">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/retail/empower-store-associate</guid>
+    </item>
+    <item>
+      <title>Use Microsoft 365 Copilot in model-driven apps (preview) - Microsoft for Sustainability</title>
+      <link>https://learn.microsoft.com/en-us/industry/sustainability/microsoft-sustainability-manager/use-microsoft-365-copilot-model-driven-apps</link>
+      <description>Learn how to use Microsoft 365 Copilot to gain insights about the data in your model-driven apps.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/sustainability/microsoft-sustainability-manager/use-microsoft-365-copilot-model-driven-apps">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/sustainability/microsoft-sustainability-manager/use-microsoft-365-copilot-model-driven-apps</guid>
+    </item>
+    <item>
+      <title>Transform the shopper experience - Microsoft for Retail</title>
+      <link>https://learn.microsoft.com/en-us/industry/retail/elevate-shopping-experience</link>
+      <description>Transform the shopper experience with Microsoft for Retail.</description>
+      <pubDate>Thu, 12 Mar 2026 19:15:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/industry/retail/elevate-shopping-experience">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/industry/retail/elevate-shopping-experience</guid>
+    </item>
+    <item>
+      <title>Monitor your flows - Power Automate</title>
+      <link>https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/monitoring-and-alerting</link>
+      <description>Learn how to monitor your Power Automate flows to ensure that they run correctly, efficiently, and securely.</description>
+      <pubDate>Thu, 12 Mar 2026 19:09:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/monitoring-and-alerting">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/monitoring-and-alerting</guid>
+    </item>
+    <item>
+      <title>Enable Self Service Disaster Recovery for Power Automate cloud flows (preview) - Power Automate</title>
+      <link>https://learn.microsoft.com/en-us/power-automate/enable-self-service-disaster-recovery</link>
+      <description>Learn how and when to prepare your environment for disaster recovery for Power Automate cloud flows.</description>
+      <pubDate>Thu, 12 Mar 2026 19:09:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/power-automate/enable-self-service-disaster-recovery">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/power-automate/enable-self-service-disaster-recovery</guid>
+    </item>
+    <item>
+      <title>Microsoft Dynamics 365 and Power Platform data residency documentation - Dynamics 365</title>
+      <link>https://learn.microsoft.com/en-us/dynamics365/get-started/availability</link>
+      <description>Learn about data residency and customer data storage for Microsoft Dynamics 365 and Power Platform, including deployment regions and storage policies.</description>
+      <pubDate>Thu, 12 Mar 2026 19:08:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/dynamics365/get-started/availability">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/dynamics365/get-started/availability</guid>
+    </item>
+    <item>
+      <title>Publish Agent to Microsoft Admin Center</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-agent-365/developer/publish</link>
+      <description>Learn how to use the a365 publish command to package your agent and upload it to the Microsoft 365 admin center.</description>
+      <pubDate>Thu, 12 Mar 2026 19:08:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-agent-365/developer/publish">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-agent-365/developer/publish</guid>
+    </item>
+    <item>
+      <title>Dynamics 365 technical and billing support - Dynamics 365</title>
+      <link>https://learn.microsoft.com/en-us/dynamics365/get-started/support/</link>
+      <description>Learn where to get support for technical issues or other questions, based on the Dynamics 365 product and license you use.</description>
+      <pubDate>Thu, 12 Mar 2026 19:08:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/dynamics365/get-started/support/">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/dynamics365/get-started/support/</guid>
+    </item>
+    <item>
+      <title>AI-Guided Setup for Agent 365</title>
+      <link>https://learn.microsoft.com/en-us/microsoft-agent-365/developer/ai-guided-setup</link>
+      <description>Use the AI-guided setup to automate Agent 365 CLI installation, configuration, and deployment with an AI coding agent. Get started faster.</description>
+      <pubDate>Thu, 12 Mar 2026 19:08:00 GMT</pubDate>
+      <category>Microsoft</category>
+      <source url="https://learn.microsoft.com/en-us/microsoft-agent-365/developer/ai-guided-setup">Microsoft Learn</source>
+      <guid isPermaLink="true">https://learn.microsoft.com/en-us/microsoft-agent-365/developer/ai-guided-setup</guid>
+    </item>
+  </channel>
+</rss>

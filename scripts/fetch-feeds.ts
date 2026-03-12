@@ -1,5 +1,5 @@
 import RSSParser from "rss-parser";
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 
 // ---------------------------------------------------------------------------
@@ -27,6 +27,37 @@ interface FeedOutput {
   lastUpdated: string;
   totalArticles: number;
   articles: Article[];
+}
+
+// ---------------------------------------------------------------------------
+// HTTP Cache — stores ETag/Last-Modified per feed URL to skip unchanged feeds
+// ---------------------------------------------------------------------------
+
+interface CacheEntry {
+  etag?: string;
+  lastModified?: string;
+  articles: Article[];
+}
+
+type FeedCache = Record<string, CacheEntry>;
+
+const CACHE_PATH = join(process.cwd(), "node_modules", ".cache", "feed-cache.json");
+
+function loadCache(): FeedCache {
+  try {
+    if (existsSync(CACHE_PATH)) {
+      return JSON.parse(readFileSync(CACHE_PATH, "utf-8"));
+    }
+  } catch {
+    // corrupt cache — start fresh
+  }
+  return {};
+}
+
+function saveCache(cache: FeedCache): void {
+  const dir = join(process.cwd(), "node_modules", ".cache");
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(CACHE_PATH, JSON.stringify(cache));
 }
 
 // ---------------------------------------------------------------------------
@@ -104,7 +135,7 @@ const FEEDS: Record<string, FeedSource> = {
   },
   "ms-learn": {
     name: "Microsoft Learn",
-    url: "https://learn.microsoft.com/api/search/rss?search=*&locale=en-us&$top=100",
+    url: "https://learn.microsoft.com/api/search/rss?search=*&locale=en-us&$top=20",
     category: "Microsoft",
   },
   // Videos
@@ -162,68 +193,109 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
-/** Sleep for `ms` milliseconds. */
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 // ---------------------------------------------------------------------------
 // Fetch & parse
 // ---------------------------------------------------------------------------
 
 async function fetchAllFeeds(): Promise<Article[]> {
-  const parser = new RSSParser();
-  const articles: Article[] = [];
+  const parser = new RSSParser({
+    timeout: 10_000,
+    maxRedirects: 3,
+    headers: { "User-Agent": "gh-newsfeed/1.0 (+https://github.com/gh-newsfeed/gh-newsfeed)" },
+  });
   const thirtyDaysAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
   const entries = Object.entries(FEEDS);
+  const cache = loadCache();
+  let cacheHits = 0;
 
-  for (let i = 0; i < entries.length; i++) {
-    const [blogId, source] = entries[i];
-    console.log(
-      `[${i + 1}/${entries.length}] Fetching ${source.name} (${source.url})`
-    );
+  console.log(`Fetching ${entries.length} feeds in parallel…`);
 
-    try {
-      const feed = await parser.parseURL(source.url);
-      let added = 0;
+  const results = await Promise.allSettled(
+    entries.map(async ([blogId, source]) => {
+      const articles: Article[] = [];
+      const cached = cache[source.url];
 
-      for (const item of feed.items) {
-        const pubDate = item.pubDate ?? item.isoDate;
-        if (!pubDate) continue;
+      try {
+        // Conditional fetch — send ETag/Last-Modified headers
+        const condHeaders: Record<string, string> = {};
+        if (cached?.etag) condHeaders["If-None-Match"] = cached.etag;
+        if (cached?.lastModified) condHeaders["If-Modified-Since"] = cached.lastModified;
 
-        const published = new Date(pubDate);
-        if (published.getTime() < thirtyDaysAgo) continue;
-
-        const rawSummary =
-          item.contentSnippet ?? item.content ?? item.summary ?? "";
-        const cleanSummary = truncate(stripHtml(rawSummary), 300);
-
-        articles.push({
-          title: (item.title ?? "Untitled").trim(),
-          link: (item.link ?? "").trim(),
-          published: published.toISOString(),
-          summary: cleanSummary,
-          blog: source.name,
-          blogId,
-          category: source.category,
-          author: (item.creator ?? item.author ?? "").trim(),
+        const res = await fetch(source.url, {
+          headers: {
+            "User-Agent": "gh-newsfeed/1.0 (+https://github.com/gh-newsfeed/gh-newsfeed)",
+            ...condHeaders,
+          },
+          signal: AbortSignal.timeout(10_000),
         });
-        added++;
+
+        // 304 Not Modified — use cached articles
+        if (res.status === 304 && cached?.articles) {
+          cacheHits++;
+          console.log(`  ✓ ${source.name}: ${cached.articles.length} articles (cached)`);
+          return cached.articles;
+        }
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        // Parse the feed body
+        const body = await res.text();
+        const feed = await parser.parseString(body);
+
+        for (const item of feed.items) {
+          const pubDate = item.pubDate ?? item.isoDate;
+          if (!pubDate) continue;
+
+          const published = new Date(pubDate);
+          if (published.getTime() < thirtyDaysAgo) continue;
+
+          const rawSummary =
+            item.contentSnippet ?? item.content ?? item.summary ?? "";
+          const cleanSummary = truncate(stripHtml(rawSummary), 300);
+
+          articles.push({
+            title: (item.title ?? "Untitled").trim(),
+            link: (item.link ?? "").trim(),
+            published: published.toISOString(),
+            summary: cleanSummary,
+            blog: source.name,
+            blogId,
+            category: source.category,
+            author: (item.creator ?? item.author ?? "").trim(),
+          });
+        }
+
+        console.log(`  ✓ ${source.name}: ${articles.length} articles`);
+
+        // Update cache with new ETag/Last-Modified
+        cache[source.url] = {
+          etag: res.headers.get("etag") ?? undefined,
+          lastModified: res.headers.get("last-modified") ?? undefined,
+          articles,
+        };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        console.error(`  ✗ ${source.name}: ${message}`);
       }
+      return articles;
+    }),
+  );
 
-      console.log(`   ✓ ${added} articles within last 30 days`);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      console.error(`   ✗ Failed to fetch ${source.name}: ${message}`);
-    }
-
-    // Be polite — wait between requests
-    if (i < entries.length - 1) {
-      await sleep(500);
+  const allArticles: Article[] = [];
+  for (const result of results) {
+    if (result.status === "fulfilled") {
+      allArticles.push(...result.value);
     }
   }
 
-  return articles;
+  console.log(`Fetched ${allArticles.length} articles from ${entries.length} feeds (${cacheHits} cache hits)`);
+
+  // Persist cache for next run
+  saveCache(cache);
+
+  return allArticles;
 }
 
 // ---------------------------------------------------------------------------

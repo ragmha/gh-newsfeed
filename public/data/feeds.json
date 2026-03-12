@@ -1,66 +1,1846 @@
 {
-  "lastUpdated": "2025-01-15T12:00:00Z",
-  "totalArticles": 6,
+  "lastUpdated": "2026-03-12T21:27:17.066Z",
+  "totalArticles": 184,
   "articles": [
     {
-      "title": "GitHub Copilot Gets Smarter with GPT-5",
-      "link": "https://github.blog/ai/copilot-gpt5",
-      "published": "2025-01-15T10:00:00Z",
-      "summary": "GitHub Copilot now leverages GPT-5 for more accurate code suggestions, improved context understanding, and multi-file awareness across your projects.",
-      "blog": "AI & Copilot",
-      "blogId": "github-ai",
-      "category": "AI & Copilot",
-      "author": "Sarah Chen"
-    },
-    {
-      "title": "New Security Advisory Database Expansion",
-      "link": "https://github.blog/security/advisory-db-expansion",
-      "published": "2025-01-14T09:00:00Z",
-      "summary": "The GitHub Advisory Database now covers over 200,000 vulnerabilities across all major ecosystems, including improved Rust and Go coverage.",
-      "blog": "GitHub Security",
-      "blogId": "github-security",
-      "category": "Security",
-      "author": "Marcus Rivera"
-    },
-    {
-      "title": "Actions Performance Improvements: 3x Faster Builds",
-      "link": "https://github.blog/engineering/actions-performance",
-      "published": "2025-01-12T14:00:00Z",
-      "summary": "We have optimized GitHub Actions runners to deliver up to 3x faster build times with improved caching and parallelism for CI/CD workflows.",
-      "blog": "GitHub Engineering",
-      "blogId": "github-engineering",
-      "category": "Engineering",
-      "author": "Priya Patel"
-    },
-    {
-      "title": "VS Code January Release Highlights",
-      "link": "https://code.visualstudio.com/updates/v1-96",
-      "published": "2025-01-10T16:00:00Z",
-      "summary": "The January release of Visual Studio Code brings sticky scroll improvements, new terminal features, and enhanced remote development support.",
+      "title": "VS Code 1.112 Insiders",
+      "link": "https://code.visualstudio.com/updates/v1_112",
+      "published": "2026-03-18T17:00:00.000Z",
+      "summary": "Learn what's new in Visual Studio Code 1.112 (Insiders) Read the full article",
       "blog": "VS Code Blog",
       "blogId": "vscode-blog",
       "category": "Developer Tools",
-      "author": "João Moreno"
+      "author": "Visual Studio Code Team"
     },
     {
-      "title": "Open Source Friday: Celebrating Community Contributors",
-      "link": "https://github.blog/opensource/open-source-friday",
-      "published": "2025-01-03T11:00:00Z",
-      "summary": "This week we spotlight outstanding community contributors who are making open source projects better for everyone through documentation and mentorship.",
-      "blog": "GitHub Open Source",
-      "blogId": "github-opensource",
-      "category": "Open Source",
-      "author": "Lisa Park"
+      "title": "Surface Hub 3 update history - Surface Hub",
+      "link": "https://learn.microsoft.com/en-us/surface-hub/surface-hub-3-update-history",
+      "published": "2026-03-12T21:02:00.000Z",
+      "summary": "Discover the latest updates for Surface Hub 3 running Microsoft Teams Rooms, focusing on security, performance, and compliance improvements.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
     },
     {
-      "title": "GitHub Universe 2024 Recap and Key Announcements",
-      "link": "https://github.blog/news/universe-2024-recap",
-      "published": "2024-12-20T08:00:00Z",
-      "summary": "A comprehensive recap of GitHub Universe 2024, covering major product launches, developer keynotes, and the roadmap for the year ahead.",
-      "blog": "The GitHub Blog",
+      "title": "Release notes for Microsoft Edge Security Updates",
+      "link": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security",
+      "published": "2026-03-12T20:58:00.000Z",
+      "summary": "Release notes for Microsoft Edge Security Updates",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Microsoft Edge release notes for Mobile Stable Channel",
+      "link": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-mobile-stable-channel",
+      "published": "2026-03-12T20:58:00.000Z",
+      "summary": "Microsoft Edge release notes for Mobile Stable Channel",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "GitHub Desktop 3.5.7-beta1",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.7-beta1",
+      "published": "2026-03-12T20:53:53.000Z",
+      "summary": "Added Add option to include a Signed-off-by trailer on commits for Developer Certificate of Origin workflows - #21741 Fixed Discard Changes now completes even when the GitHub Desktop window is not focused - #21739 Allow origin fetch on empty repo - #4574 #4575. Thanks @jackfreem! Fix window…",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Share and manage agents built with Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn how to share and manage agents built with Microsoft 365 Copilot.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Agent Builder in Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn how to use Microsoft 365 Copilot Agent Builder to build declarative agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Templates for agents for Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-templates-overview",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn how to use templates to quickly create declarative agents in Microsoft 365 Copilot.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "What's New for Microsoft 365 Copilot Developers",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/whats-new",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Find out what's new in Microsoft 365 Copilot extensibility, including declarative agents, custom engine agents, connectors, Copilot APIs, and more.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Add knowledge sources to your declarative agent in Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-add-knowledge",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn about the different types of knowledge sources that you can add to your declarative agent when you build your agent with the Agent Builder feature in Microsoft 365 Copilot.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Build Agents with Agent Builder in Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-build-agents",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn how to build agents by using the Agent Builder feature in Microsoft 365 Copilot.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Add interactive UI widgets to declarative agents",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-ui-widgets",
+      "published": "2026-03-12T20:51:00.000Z",
+      "summary": "Learn how to add interactive UI widgets to MCP server-based declarative agents",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Agent Registry in the Microsoft 365 admin center - Microsoft 365 admin",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Agent Registry in the Microsoft 365 admin center.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Microsoft 365 Copilot agents admin guide",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/m365-agents-admin-guide",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn about administering and deploying Microsoft 365 Copilot agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Manage Microsoft feedback for your organization - Microsoft 365 admin",
+      "link": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Manage feedback your users can send to Microsoft about Microsoft products.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Customize the Employee Self-Service agent",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/employee-self-service/customize",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn about the customization stage in the deployment process for the Employee Self-Service agent.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Deploy Copilot Studio agents",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-deploy",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn how to deploy Copilot Studio agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Manage requested Copilot Studio agents",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-copilot-studio-requested",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn how to manage requested Copilot Studio agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Deploy agents for Microsoft 365 Copilot",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-assign-deploy",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn how to deploy agents for Microsoft 365 Copilot.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Set availability of Copilot Studio agents",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/agent-essentials/agent-lifecycle/agent-availability",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Learn how to set availability of Copilot Studio agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Manage Microsoft 365 Copilot Scenarios",
+      "link": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-page",
+      "published": "2026-03-12T20:47:00.000Z",
+      "summary": "Discover how to configure Microsoft 365 Copilot scenarios in the admin center. Streamline user access, data security, and Copilot actions for your team.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Get Microsoft Calling Plan telephone numbers for your organization - Microsoft Teams",
+      "link": "https://learn.microsoft.com/en-us/microsoftteams/getting-phone-numbers-for-your-users",
+      "published": "2026-03-12T20:43:00.000Z",
+      "summary": "Learn about acquiring new telephone numbers for your tenant with Microsoft Teams Calling Plans.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Auto attendant and Call queue historical reports - Microsoft Teams",
+      "link": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-historical-reports",
+      "published": "2026-03-12T20:43:00.000Z",
+      "summary": "Learn how to use the Teams Auto Attendant & Call Queue Historical Reports with Power BI to view Auto attendant and Call queue historical data.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "New VDI solution for Teams - Microsoft Teams",
+      "link": "https://learn.microsoft.com/en-us/microsoftteams/vdi-2",
+      "published": "2026-03-12T20:43:00.000Z",
+      "summary": "Learn about Teams for Virtualized Desktop Infrastructure (VDI) 2.0.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Release notes for Microsoft Teams - Office release notes",
+      "link": "https://learn.microsoft.com/en-us/officeupdates/teams-admin",
+      "published": "2026-03-12T20:42:00.000Z",
+      "summary": "This article describes the release notes information about new admin features for Microsoft Teams and Teams admin center.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Install PowerShell on Linux - PowerShell",
+      "link": "https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-linux",
+      "published": "2026-03-12T19:38:00.000Z",
+      "summary": "This article lists the Linux distributions and package managers that are supported for installing PowerShell.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Install PowerShell 7 on macOS - PowerShell",
+      "link": "https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-macos",
+      "published": "2026-03-12T19:38:00.000Z",
+      "summary": "How to install PowerShell on macOS",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Alternate ways to install PowerShell - PowerShell",
+      "link": "https://learn.microsoft.com/en-us/powershell/scripting/install/alternate-install-methods",
+      "published": "2026-03-12T19:38:00.000Z",
+      "summary": "Alternate ways to install PowerShell on non-Windows platforms.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Persist add-in state and settings - Office Add-ins",
+      "link": "https://learn.microsoft.com/en-us/office/dev/add-ins/develop/persisting-add-in-state-and-settings",
+      "published": "2026-03-12T19:25:00.000Z",
+      "summary": "Learn how to persist data in Office Web Add-in applications running in the stateless environment of a browser control.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Autogenerate JSON metadata for custom functions - Office Add-ins",
+      "link": "https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-json-autogeneration",
+      "published": "2026-03-12T19:25:00.000Z",
+      "summary": "Use JSDoc tags to dynamically create your custom functions JSON metadata.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use legacy Office SSO to get the identity of the signed-in user - Office Add-ins",
+      "link": "https://learn.microsoft.com/en-us/office/dev/add-ins/develop/use-sso-to-get-office-signed-in-user-token",
+      "published": "2026-03-12T19:25:00.000Z",
+      "summary": "Call the getAccessToken API to get the ID token with name, email, and additional information about the signed-in user.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Universal Print connector version 2",
+      "link": "https://learn.microsoft.com/en-us/universal-print/fundamentals/universal-print-connector-v2-information",
+      "published": "2026-03-12T19:20:00.000Z",
+      "summary": "Guidance about deploying connector v2.0 in your organization",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Security Copilot Agents in Microsoft Purview overview",
+      "link": "https://learn.microsoft.com/en-us/purview/copilot-in-purview-agents-overview",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Learn about Microsoft Security Copilot agents in Microsoft Purview",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Get started with Microsoft Purview Posture Agent in Data Security Posture Management",
+      "link": "https://learn.microsoft.com/en-us/purview/copilot-in-purview-posture-agent-get-started",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Prepare for and deploy the Microsoft Purview Agents.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Catalog Enrichment Agent in Copilot Studio (preview) - Microsoft for Retail",
+      "link": "https://learn.microsoft.com/en-us/industry/retail/catalog-enrichment-agent/overview-catalog-enrichment-agent",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Learn about Catalog Enrichment Agent in Copilot Studio (preview).",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Microsoft technologies used in Microsoft for Manufacturing - Microsoft for Manufacturing",
+      "link": "https://learn.microsoft.com/en-us/industry/manufacturing/appendix/microsoft-technology",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Learn about the key Microsoft technologies and solutions supporting the implementations of Microsoft for Manufacturing scenarios.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Intelligent factories - Microsoft for Manufacturing",
+      "link": "https://learn.microsoft.com/en-us/industry/manufacturing/enable-intelligent-factories",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Use Industrial IoT, data analytics, AI, and cloud connectivity to build intelligent factories using Microsoft for Manufacturing",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Digital engineering - Microsoft for Manufacturing",
+      "link": "https://learn.microsoft.com/en-us/industry/manufacturing/unlock-innovation",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Evolve your technology road map to adopt capabilities like AI, mixed reality, digital twins, and edge-to-cloud using Microsoft for Manufacturing.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Resilient supply chains - Microsoft for Manufacturing",
+      "link": "https://learn.microsoft.com/en-us/industry/manufacturing/build-supply-chain-manufacturing",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Help customers build resilient and sustainable supply chains using Microsoft for Manufacturing",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Ingest data, test, and publish Personalized Shopping Agent in Copilot Studio (preview) - Microsoft for Retail",
+      "link": "https://learn.microsoft.com/en-us/industry/retail/personal-shopping-agent/ingest-data-personal-shopping-agent",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Ingest data, test, and publish Personalized Shopping Agent in Copilot Studio (preview).",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Optimize merchandising operations - Microsoft for Retail",
+      "link": "https://learn.microsoft.com/en-us/industry/retail/maximize-data",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Optimize merchandising operations with Microsoft for Retail.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Empower the new retail workforce - Microsoft for Retail",
+      "link": "https://learn.microsoft.com/en-us/industry/retail/empower-store-associate",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Empower the new retail workforce with Microsoft for Retail.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use Microsoft 365 Copilot in model-driven apps (preview) - Microsoft for Sustainability",
+      "link": "https://learn.microsoft.com/en-us/industry/sustainability/microsoft-sustainability-manager/use-microsoft-365-copilot-model-driven-apps",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Learn how to use Microsoft 365 Copilot to gain insights about the data in your model-driven apps.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Transform the shopper experience - Microsoft for Retail",
+      "link": "https://learn.microsoft.com/en-us/industry/retail/elevate-shopping-experience",
+      "published": "2026-03-12T19:15:00.000Z",
+      "summary": "Transform the shopper experience with Microsoft for Retail.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Monitor your flows - Power Automate",
+      "link": "https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/monitoring-and-alerting",
+      "published": "2026-03-12T19:09:00.000Z",
+      "summary": "Learn how to monitor your Power Automate flows to ensure that they run correctly, efficiently, and securely.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Enable Self Service Disaster Recovery for Power Automate cloud flows (preview) - Power Automate",
+      "link": "https://learn.microsoft.com/en-us/power-automate/enable-self-service-disaster-recovery",
+      "published": "2026-03-12T19:09:00.000Z",
+      "summary": "Learn how and when to prepare your environment for disaster recovery for Power Automate cloud flows.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Microsoft Dynamics 365 and Power Platform data residency documentation - Dynamics 365",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/get-started/availability",
+      "published": "2026-03-12T19:08:00.000Z",
+      "summary": "Learn about data residency and customer data storage for Microsoft Dynamics 365 and Power Platform, including deployment regions and storage policies.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Publish Agent to Microsoft Admin Center",
+      "link": "https://learn.microsoft.com/en-us/microsoft-agent-365/developer/publish",
+      "published": "2026-03-12T19:08:00.000Z",
+      "summary": "Learn how to use the a365 publish command to package your agent and upload it to the Microsoft 365 admin center.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Dynamics 365 technical and billing support - Dynamics 365",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/get-started/support/",
+      "published": "2026-03-12T19:08:00.000Z",
+      "summary": "Learn where to get support for technical issues or other questions, based on the Dynamics 365 product and license you use.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "AI-Guided Setup for Agent 365",
+      "link": "https://learn.microsoft.com/en-us/microsoft-agent-365/developer/ai-guided-setup",
+      "published": "2026-03-12T19:08:00.000Z",
+      "summary": "Use the AI-guided setup to automate Agent 365 CLI installation, configuration, and deployment with an AI coding agent. Get started faster.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Work order lifecycle and system statuses - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/work-order-status-booking-status",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Track the status of a work order in its lifecycle with system statuses, substatuses, and booking statuses.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Set up Case Management Agent to resolve cases",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/set-up-case-resolution-agent",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn how to set up autonomous Case Management Agent to help customer support teams efficiently resolve cases.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Universal Resource Scheduling for Dynamics 365 Field Service overview - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/universal-resource-scheduling-for-field-service",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn all about Universal Resource Scheduling for Dynamics 365 Field Service",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Get started - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/field-service-get-started",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn how to get started with Dynamics 365 Field Service.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Set up booking rules - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/set-up-booking-rules",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn how to set up booking rules in Dynamics 365 Field Service.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Booking timestamps and booking journals - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/booking-timestamps",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn about booking timestamps in Dynamics 365 Field Service.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Collaborate on work orders with Microsoft Teams - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/field-service-teams-collaboration",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Collaborate in the context of work orders or other tables by integrating with Microsoft Teams.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Understand the booking lock option in Resource Scheduling Optimization - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/booking-lock-options",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn about the booking lock options in Resource Scheduling Optimization for Dynamics 365 Field Service.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use Microsoft 365 Copilot chat in Field Service (preview) - Dynamics 365 Field Service",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps",
+      "published": "2026-03-12T19:04:00.000Z",
+      "summary": "Learn how to use Microsoft 365 Copilot chat to gain insights about the data in Dynamics 365 Field Service.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Analyze conversational agent effectiveness - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Improve how well your agent responds to user questions with the upgraded analytics page in Copilot Studio. Review user feedback, knowledge source use, and the outcomes of conversations between your agent and your users.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Understand downloaded session data from Copilot Studio - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-transcripts-studio",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Understand session data downloaded from Microsoft Copilot Studio from the last 30 days of agent conversations.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Control how transcripts are retained and accessed - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-transcript-controls",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Control if makers can view or download conversation transcripts for Copilot Studio agents, and enable or disable saving transcripts in Dataverse.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Analyze user questions by theme (preview) - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-themes",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Understand questions users ask your agent with autoclassified themes, and gain insight into how well your agent responds.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Analyze autonomous agent performance - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-health",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Use the analytics page in Copilot Studio to improve how well your autonomous agent responds to triggers. Review agent outcomes, trigger and tool use, and overall agent success.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Create proforma project invoices with Billing hub",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/project-operations/proforma-invoicing/billing-hub",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "This article provides information about how to use Billing hub to create proforma project-based invoices.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Analyzing Marketplace app breaking changes validation telemetry - Business Central",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/telemetry-appsource-app-validation-trace",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Learn about the telemetry for breaking changes validation of Marketplace apps in Business Central.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use Microsoft 365 Copilot chat in model-driven apps (preview)",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/project-operations/pro/ai-capabilities/use-microsoft-365-copilot-model-driven-apps",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Learn how to use Microsoft 365 Copilot chat to gain insights about the data in your model-driven apps.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Install the Warehouse Management mobile app - Supply Chain Management | Dynamics 365",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/warehousing/install-configure-warehouse-management-app",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Learn how to install the Warehouse Management mobile app on each of your mobile devices and configure it to connect to your environment.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Analyze lists of user questions and user reactions - Microsoft Copilot Studio",
+      "link": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-question-reaction-lists",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Analyze lists of user questions and reactions to agent responses.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Correct intercompany posted transactions (Preview)",
+      "link": "https://learn.microsoft.com/en-us/dynamics365/project-operations/project-accounting/intercompany-corrections",
+      "published": "2026-03-12T19:03:00.000Z",
+      "summary": "Intercompany posted transaction corrections in Microsoft Dynamics 365 Project Operations give you a controlled way to reverse and repost timesheet entries across legal entities.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Interactive vs non-interactive modes | Copilot CLI for beginners",
+      "link": "https://www.youtube.com/watch?v=bdIJkGr2NV0",
+      "published": "2026-03-12T18:50:17.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "High-level architecture - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/getting-started/high-level-architecture",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Get a high-level overview of Azure Databricks platform architecture, including control plane, compute plane, and storage components.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Configure Inbound Private Link - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/security/network/front-end/front-end-private-connect",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to configure Private Link for inbound connections.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Monitor account activity with system tables - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/admin/system-tables/",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "This article provides an introduction to Azure Databricks system tables. Learn how to enable, access, and analyze the data in system tables.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Supported foundation models on Mosaic AI Model Serving - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/machine-learning/model-serving/foundation-model-overview",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "This article provides an overview of the foundation models that are supported by Mosaic AI Model Serving.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Set up and manage a Genie space - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/genie/set-up",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to set up and manage Genie spaces.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use the Genie API to integrate Genie into your applications - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/genie/conversation-api",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Use the Genie API to integrate natural language data querying into applications, chatbots, and AI agent frameworks.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "What is Lakebase Provisioned? - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/oltp/instances/about",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to work with Lakebase, a managed PostgreSQL online transaction processing (OLTP) database.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use materialized views in Databricks SQL - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ldp/dbsql/materialized",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to create, refresh, and query Databricks materialized views in Databricks SQL.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Compliance security profile - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/security/privacy/security-profile",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn about the compliance security profile, its compliance controls, and supported features.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "January 2026 - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/january",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "January 2026 release notes for new Azure Databricks features and improvements.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "What is Databricks One? - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/workspace/databricks-one",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn about Databricks One, a simplified UI for business users that provides a single entry point for AI/BI dashboards, Genie, and Databricks Apps.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Attribute usage with serverless budget policies - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/admin/usage/budget-policies",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to use serverless budget policies to enforce cost attribution tags for serverless compute.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Create and manage Git folders - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/repos/git-operations-with-repos",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to create and manage Databricks Git folders, including cloning repositories, branching, committing, pushing, and more.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Delta table streaming reads and writes - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/structured-streaming/delta-lake",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to use Delta Lake tables as streaming sources and sinks, handle upstream changes, and resolve errors from updates and deletes in streaming queries.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Incremental refresh for materialized views - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/optimizations/incremental-refresh",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to use incremental refresh with materialized views.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Configure Git integration for Git folders - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/repos/repos-setup",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Configure Git integration for Databricks Git folders, including credentials, network connectivity, and security features.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Authenticate to a database instance - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/oltp/instances/authentication",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to obtain an OAuth token and use it to authenticate to your Lakebase database instance.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Ingest data from Salesforce - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/salesforce-pipeline",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to ingest data from Salesforce into Azure Databricks using Lakeflow Connect.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use tags to attribute and track usage - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/admin/account-settings/usage-detail-tags",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to add custom tags to resources to monitor cost and accurately attribute Azure Databricks usage to your organization's business units and teams (for example, for chargebacks).",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Configure OAuth M2M for SharePoint ingestion - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/sharepoint-source-setup-m2m",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to configure OAuth machine-to-machine (M2M) authentication for SharePoint ingestion into Azure Databricks.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Set up the Azure Databricks Excel Add-in - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/integrations/excel-setup",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to install the Databricks Excel Add-in and connect to your Databricks workspace using SSO authentication in Excel for the web, Windows, or macOS.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Ingest data from SharePoint - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/sharepoint-pipeline",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to create a Microsoft SharePoint ingestion pipeline using Databricks Lakeflow Connect.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Connect to Apache Kafka - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/connect/streaming/kafka/",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "This article describes how you can use Apache Kafka as either a source or a sink when running Structured Streaming workloads on Azure Databricks.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Create vector search endpoints and indexes - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/vector-search/create-vector-search",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to create vector search endpoints and indexes using Mosaic AI Vector Search. This article also provides guidance on how to configure a vector search endpoint to serve an embeddings model of your choosing.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Serve lakehouse data with synced tables (Lakebase Provisioned) - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/oltp/instances/sync-data/sync-table",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Serve lakehouse data through Lakebase Provisioned instances using synced tables for operational applications",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Serverless compute for notebooks - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/compute/serverless/notebooks",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to use your workspace's serverless interactive compute resource.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Standard compute requirements and limitations - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/compute/standard-limitations",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn about limitations and requirements for standard compute access mode.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Create a SQL warehouse - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/compute/sql-warehouse/create",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn about SQL warehouse requirements, how to configure and manage SQL warehouses using the Azure Databricks UI, and advanced configuration options.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Run your Lakeflow Jobs with serverless compute for workflows - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/jobs/run-serverless-jobs",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to use serverless compute for workflows to run a data processing workflow without configuring and deploying infrastructure.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Use streaming tables in Databricks SQL - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ldp/dbsql/streaming",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn how to create, refresh, configure, and monitor Databricks streaming tables in Databricks SQL.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Load data in pipelines - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/ldp/load",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "This article describes how to load data to Azure Databricks with Lakeflow Spark Declarative Pipelines.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Foundation Model APIs limits and quotas - Azure Databricks",
+      "link": "https://learn.microsoft.com/en-us/azure/databricks/machine-learning/foundation-model-apis/limits",
+      "published": "2026-03-12T18:41:00.000Z",
+      "summary": "Learn about limits and quotas for Databricks Foundation Model APIs workloads.",
+      "blog": "Microsoft Learn",
+      "blogId": "ms-learn",
+      "category": "Microsoft",
+      "author": ""
+    },
+    {
+      "title": "Rubber Duck Thursdays!",
+      "link": "https://www.youtube.com/watch?v=kn6EvYsyE_g",
+      "published": "2026-03-12T16:57:14.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Anders Hejlsberg: learning to let go",
+      "link": "https://www.youtube.com/shorts/PxXBIhnPgqw",
+      "published": "2026-03-12T16:00:39.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "REST API version 2026-03-10 is now available",
+      "link": "https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available",
+      "published": "2026-03-12T16:00:07.000Z",
+      "summary": "Previously, we introduced calendar-based versioning for our REST API, giving us a path to evolving our API while giving integrators plenty of time and clear guidance for upgrading. Now, we’re… The post REST API version 2026-03-10 is now available appeared first on The GitHub Blog.",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+      "link": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/",
+      "published": "2026-03-12T16:00:00.000Z",
+      "summary": "AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions. The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
       "blogId": "github-blog",
       "category": "Platform",
-      "author": "Thomas Dohmke"
+      "author": "Carie Fisher"
+    },
+    {
+      "title": "Copilot auto model selection is generally available in JetBrains IDEs",
+      "link": "https://github.blog/changelog/2026-03-12-copilot-auto-model-selection-is-generally-available-in-jetbrains-ides",
+      "published": "2026-03-12T15:54:33.000Z",
+      "summary": "GitHub Copilot auto model selection is now generally available in JetBrains IDEs for all Copilot plans. With auto, Copilot chooses a model on your behalf based on real-time model availability… The post Copilot auto model selection is generally available in JetBrains IDEs appeared first on The…",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "Actions OIDC tokens now support repository custom properties",
+      "link": "https://github.blog/changelog/2026-03-12-actions-oidc-tokens-now-support-repository-custom-properties",
+      "published": "2026-03-12T14:53:28.000Z",
+      "summary": "GitHub Actions OpenID Connect (OIDC) tokens now support repository custom properties as claims. Additionally, a new settings page is available in public preview, making it easy to configure OIDC token… The post Actions OIDC tokens now support repository custom properties appeared first on The…",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "GitHub Desktop 3.5.7-beta2",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.7-beta2",
+      "published": "2026-03-12T13:10:49.000Z",
+      "summary": "Added Allow empty commits via the commit options menu - #21771",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "GitHub CLI 2.88.1",
+      "link": "https://github.com/cli/cli/releases/tag/v2.88.1",
+      "published": "2026-03-12T12:51:03.000Z",
+      "summary": "Fix pr commands failing with read:project scope error v2.88.0 introduced a regression where pr commands would fail with the error: error: your authentication token is missing required scopes [read:project] To request it, run: gh auth refresh -s read:project Previously, missing read:project scope…",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "release-3.5.7-test2",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.7-test2",
+      "published": "2026-03-12T11:50:55.000Z",
+      "summary": "Add changelog for test release",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Issue fields: Structured issue metadata is in public preview",
+      "link": "https://github.blog/changelog/2026-03-12-issue-fields-structured-issue-metadata-is-in-public-preview",
+      "published": "2026-03-12T08:03:06.000Z",
+      "summary": "Issue fields are now available in public preview for select GitHub organizations. If you’ve been using labels like priority/p0 or severity/high to track structured data in issues, you know the… The post Issue fields: Structured issue metadata is in public preview appeared first on The GitHub Blog.",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "GitHub availability report: February 2026",
+      "link": "https://github.blog/news-insights/company-news/github-availability-report-february-2026/",
+      "published": "2026-03-12T03:23:54.000Z",
+      "summary": "In February, we experienced six incidents that resulted in degraded performance across GitHub services. The post GitHub availability report: February 2026 appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Jakub Oleksy"
+    },
+    {
+      "title": "Jueves de Quack con Nerdearla",
+      "link": "https://www.youtube.com/watch?v=StWXcesvGj4",
+      "published": "2026-03-12T02:18:22.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Addressing GitHub’s recent availability issues",
+      "link": "https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/",
+      "published": "2026-03-11T21:41:51.000Z",
+      "summary": "GitHub recently experienced several availability incidents. We understand the impact these outages have on our customers and are sharing details on the stabilization work we’re prioritizing right now. The post Addressing GitHub’s recent availability issues appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Vlad Fedorov"
+    },
+    {
+      "title": "release-3.5.7-test1",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.7-test1",
+      "published": "2026-03-11T20:32:18.000Z",
+      "summary": "Add changelog for test release",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Request Copilot code review from GitHub CLI",
+      "link": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli",
+      "published": "2026-03-11T18:11:51.000Z",
+      "summary": "You can now request a review from GitHub Copilot directly from your terminal using the GitHub CLI. Whether you’re editing an existing pull request or creating a new one, Copilot… The post Request Copilot code review from GitHub CLI appeared first on The GitHub Blog.",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "Fix issues faster using Copilot CLI fleet command",
+      "link": "https://www.youtube.com/shorts/lHtQPImRJSc",
+      "published": "2026-03-11T18:00:55.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
+      "link": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides",
+      "published": "2026-03-11T16:40:03.000Z",
+      "summary": "This update brings several new features and improvements to GitHub Copilot in JetBrains IDEs. Core agentic capabilities, including custom agents, sub-agents, and plan agent, are now generally available, with agent… The post Major agentic capabilities improvements in GitHub Copilot for JetBrains…",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "Explore a repository using Copilot on the web",
+      "link": "https://github.blog/changelog/2026-03-11-explore-a-repository-using-copilot-on-the-web",
+      "published": "2026-03-11T13:43:49.000Z",
+      "summary": "We’ve made it easier to explore a repository’s file structure when you chat with Copilot on the web. What’s changed Developers can now ask Copilot to show a file, then… The post Explore a repository using Copilot on the web appeared first on The GitHub Blog.",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "GitHub Desktop 3.5.6",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.6",
+      "published": "2026-03-10T21:55:23.000Z",
+      "summary": "New Support adding Copilot as a co author and show avatars for mentionable users - #21634 Fixed Fix detection of IDEs installed from JetBrains Toolbox - #21498 Choose the best account for the current repository to generate commit messages - #21484 Remove trailing $ typo in hooks output - #21638…",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Forking Chat Sessions!",
+      "link": "https://www.youtube.com/shorts/mpqrdghoj_Y",
+      "published": "2026-03-10T21:40:00.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Secret scanning pattern updates — March 2026",
+      "link": "https://github.blog/changelog/2026-03-10-secret-scanning-pattern-updates-march-2026",
+      "published": "2026-03-10T21:03:15.000Z",
+      "summary": "GitHub secret scanning continually updates its detectors, validators, and analyzers. Here’s what’s new for March 2026. 28 new secret detectors from 15 providers, including Lark, Vercel, Snowflake, and Supabase. 39… The post Secret scanning pattern updates — March 2026 appeared first on The GitHub…",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "The era of “AI as text” is over. Execution is the new interface.",
+      "link": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/",
+      "published": "2026-03-10T20:16:01.000Z",
+      "summary": "AI is shifting from prompt-response interactions to programmable execution. See how the GitHub Copilot SDK enables agentic workflows directly inside your applications. The post The era of “AI as text” is over. Execution is the new interface. appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Gwen Davis"
+    },
+    {
+      "title": "GitHub CLI 2.88.0",
+      "link": "https://github.com/cli/cli/releases/tag/v2.88.0",
+      "published": "2026-03-10T20:11:20.000Z",
+      "summary": "Request Copilot Code Review from gh gh pr create and gh pr edit now support Copilot Code Review as a reviewer. Request a review with --add-reviewer @copilot, or select Copilot interactively from the searchable reviewer prompt. Create a pull request and request review from Copilot: gh pr create…",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "CodeQL 2.24.3 adds Java 26 support and other improvements",
+      "link": "https://github.blog/changelog/2026-03-10-codeql-2-24-3-adds-java-26-support-and-other-improvements",
+      "published": "2026-03-10T19:51:23.000Z",
+      "summary": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.24.3, which adds support for Java 26… The post CodeQL 2.24.3 adds Java 26 support and other improvements appeared first on The GitHub Blog.",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "How to use the fleet command in Copilot CLI | GitHub demo",
+      "link": "https://www.youtube.com/watch?v=BviR6Me36gI",
+      "published": "2026-03-10T18:08:27.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Dependabot now supports pre-commit hooks",
+      "link": "https://github.blog/changelog/2026-03-10-dependabot-now-supports-pre-commit-hooks",
+      "published": "2026-03-10T18:04:32.000Z",
+      "summary": "GitHub Dependabot now natively supports automatic dependency updates for pre-commit hooks. By adding pre-commit as a package ecosystem in your dependabot.yml configuration, Dependabot will parse your .pre-commit-config.yaml, check each hook’s… The post Dependabot now supports pre-commit hooks…",
+      "blog": "GitHub Changelog",
+      "blogId": "github-changelog",
+      "category": "Platform",
+      "author": "Allison"
+    },
+    {
+      "title": "GitHub Copilot CLI solved my issues so I could practice singing",
+      "link": "https://www.youtube.com/shorts/1npISWbvle4",
+      "published": "2026-03-10T18:00:05.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "VS Code Live: Code to Canvas with Figma MCP and GitHub Copilot",
+      "link": "https://www.youtube.com/watch?v=O1i-Te78-u4",
+      "published": "2026-03-10T17:41:53.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Jueves de Quack con @Karobot",
+      "link": "https://www.youtube.com/watch?v=PQl8v1Uu9oE",
+      "published": "2026-03-10T14:30:06.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Agent Hooks Are Here!",
+      "link": "https://www.youtube.com/shorts/RctUtkfOHoU",
+      "published": "2026-03-10T03:53:49.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "🔴 Let it Cook - A Dash of Cinnamon",
+      "link": "https://www.youtube.com/watch?v=kLPihq62dO4",
+      "published": "2026-03-09T21:41:31.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Learn to use an AI agent in your terminal | Copilot CLI for beginners",
+      "link": "https://www.youtube.com/shorts/yXZVNfnAoCk",
+      "published": "2026-03-09T18:22:01.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Visual Studio Code 1.111",
+      "link": "https://code.visualstudio.com/updates/v1_111",
+      "published": "2026-03-09T17:00:00.000Z",
+      "summary": "Learn what's new in Visual Studio Code 1.111 Read the full article",
+      "blog": "VS Code Blog",
+      "blogId": "vscode-blog",
+      "category": "Developer Tools",
+      "author": "Visual Studio Code Team"
+    },
+    {
+      "title": "Build a real-world example with Microsoft Agent Framework, Microsoft Foundry, MCP and Aspire",
+      "link": "https://devblogs.microsoft.com/blog/build-a-real-world-example-with-microsoft-agent-framework-microsoft-foundry-mcp-and-aspire",
+      "published": "2026-03-09T16:00:42.000Z",
+      "summary": "Building AI agents is getting easier. Deploying them as part of a real application, with multiple services, persistent state, and production infrastructure, is where things get complicated. Developers from the .NET community have requested whether a real-world example that shows running on local…",
+      "blog": "Microsoft DevBlogs",
+      "blogId": "ms-devblogs",
+      "category": "Microsoft",
+      "author": "Justin Yoo"
+    },
+    {
+      "title": "Getting started with GitHub Copilot CLI | Tutorial for beginners",
+      "link": "https://www.youtube.com/watch?v=BDxRhhs36ns",
+      "published": "2026-03-09T16:00:15.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Under the hood: Security architecture of GitHub Agentic Workflows",
+      "link": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/",
+      "published": "2026-03-09T16:00:00.000Z",
+      "summary": "GitHub Agentic Workflows are built with isolation, constrained outputs, and comprehensive logging. Learn how our threat model and security architecture help teams run agents safely in GitHub Actions. The post Under the hood: Security architecture of GitHub Agentic Workflows appeared first on The…",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Landon Cox"
+    },
+    {
+      "title": "What's the one thing you should do to level up as a developer?",
+      "link": "https://www.youtube.com/shorts/ABqY09oD484",
+      "published": "2026-03-09T04:04:23.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "The new GitHub repository dashboard is here",
+      "link": "https://www.youtube.com/shorts/4zSz192sdG4",
+      "published": "2026-03-08T15:00:14.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "The story behind npmx and its massive community growth",
+      "link": "https://www.youtube.com/shorts/D944tiUHQzk",
+      "published": "2026-03-07T15:00:18.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Open Source Friday Special with Flox",
+      "link": "https://www.youtube.com/watch?v=LJaT41higmo",
+      "published": "2026-03-07T08:43:49.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Open Source Friday with Vuetify!",
+      "link": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0",
+      "published": "2026-03-07T07:03:45.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework",
+      "link": "https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/",
+      "published": "2026-03-06T21:09:04.000Z",
+      "summary": "GitHub Security Lab Taskflow Agent is very effective at finding Auth Bypasses, IDORs, Token Leaks, and other high-impact vulnerabilities. The post How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Man Yue Mo"
+    },
+    {
+      "title": "The Download: Copilot CLI goes GA, new repo dashboard, npmx and more",
+      "link": "https://www.youtube.com/watch?v=1iG8kumbRcs",
+      "published": "2026-03-06T17:34:31.000Z",
+      "summary": "",
+      "blog": "GitHub YouTube",
+      "blogId": "github-youtube",
+      "category": "Videos",
+      "author": "GitHub"
+    },
+    {
+      "title": "Let it Cook - AI work work work work work flows",
+      "link": "https://www.youtube.com/watch?v=QZxZgHtl5Qw",
+      "published": "2026-03-06T17:19:08.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "VS Code Live - Debugging Dockerfiles in VS Code",
+      "link": "https://www.youtube.com/watch?v=G6Nmc4XoZSI",
+      "published": "2026-03-06T04:48:34.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "GPT-5.4 just landed in VS Code!",
+      "link": "https://www.youtube.com/watch?v=A8LiOBd5AgQ",
+      "published": "2026-03-06T02:15:16.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Copilot CLI in VS Code",
+      "link": "https://www.youtube.com/shorts/DDHT1xj01kE",
+      "published": "2026-03-05T20:37:38.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "60 million Copilot code reviews and counting",
+      "link": "https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/",
+      "published": "2026-03-05T20:10:43.000Z",
+      "summary": "How Copilot code review helps teams keep up with AI-accelerated code changes. The post 60 million Copilot code reviews and counting appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Ria Gopu"
+    },
+    {
+      "title": "Scaling AI opportunity across the globe: Learnings from GitHub and Andela",
+      "link": "https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/",
+      "published": "2026-03-05T17:00:00.000Z",
+      "summary": "Developers connected to Andela share how they’re learning AI tools inside real production workflows. The post Scaling AI opportunity across the globe: Learnings from GitHub and Andela appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Admas Kanyagia"
+    },
+    {
+      "title": "Making agents practical for real-world development",
+      "link": "https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development",
+      "published": "2026-03-05T00:00:00.000Z",
+      "summary": "Explore agent orchestration, extensibility, and continuity in VS Code 1.110: lifecycle hooks, agent skills, session memory, and integrated browser tools. Read the full article",
+      "blog": "VS Code Blog",
+      "blogId": "vscode-blog",
+      "category": "Developer Tools",
+      "author": "VS Code Team"
+    },
+    {
+      "title": "5 New VS Code Features for Smarter Agents",
+      "link": "https://www.youtube.com/watch?v=MvwcWWp1NFs",
+      "published": "2026-03-04T20:15:01.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "February 2026 (version 1.110)",
+      "link": "https://code.visualstudio.com/updates/v1_110",
+      "published": "2026-03-04T17:00:00.000Z",
+      "summary": "What's new in the Visual Studio Code February 2026 Release (1.110). Read the full article",
+      "blog": "VS Code Blog",
+      "blogId": "vscode-blog",
+      "category": "Developer Tools",
+      "author": "Visual Studio Code Team"
+    },
+    {
+      "title": "Get started with GitHub Copilot CLI: A free, hands-on course",
+      "link": "https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course",
+      "published": "2026-03-03T20:40:42.000Z",
+      "summary": "Learn GitHub Copilot CLI with this free, 8-chapter hands-on course. Review code, generate tests, debug issues, and build custom agents and skills - all from your terminal. No AI experience needed. Works with GitHub Copilot Free. Clone the repo or open in Codespaces to get started. The post Get…",
+      "blog": "Microsoft DevBlogs",
+      "blogId": "ms-devblogs",
+      "category": "Microsoft",
+      "author": "Dan Wahlin"
+    },
+    {
+      "title": "How we rebuilt the search architecture for high availability in GitHub Enterprise Server",
+      "link": "https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/",
+      "published": "2026-03-03T18:45:09.000Z",
+      "summary": "Here's how we the search experience better, faster, and more resilient for GHES customers. The post How we rebuilt the search architecture for high availability in GitHub Enterprise Server appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "David Tippett"
+    },
+    {
+      "title": "Join or host a GitHub Copilot Dev Days event near you",
+      "link": "https://github.blog/ai-and-ml/github-copilot/join-or-host-a-github-copilot-dev-days-event-near-you/",
+      "published": "2026-03-03T16:55:00.000Z",
+      "summary": "GitHub Copilot Dev Days is a global series of hands-on, in-person, community-led events designed to help developers explore real-world, AI-assisted coding. The post Join or host a GitHub Copilot Dev Days event near you appeared first on The GitHub Blog.",
+      "blog": "GitHub Blog",
+      "blogId": "github-blog",
+      "category": "Platform",
+      "author": "Katie Savage"
+    },
+    {
+      "title": "The JavaScript AI Build-a-thon Season 2 starts today!",
+      "link": "https://devblogs.microsoft.com/blog/the-javascript-ai-build-a-thon-season-2-starts-today",
+      "published": "2026-03-02T20:00:39.000Z",
+      "summary": "The JavaScript AI Build‑a‑thon Season 2 starts today! Join a free, four‑week, hands‑on program—from Local AI and RAG pipelines to multi‑agent hackathon—designed specifically for JavaScript/TypeScript developers. The post The JavaScript AI Build-a-thon Season 2 starts today! appeared first on…",
+      "blog": "Microsoft DevBlogs",
+      "blogId": "ms-devblogs",
+      "category": "Microsoft",
+      "author": "Julia Muiruri"
+    },
+    {
+      "title": "GitHub Copilot Dev Days: Build faster with GitHub Copilot CLI, in VS Code & Visual Studio, and beyond!",
+      "link": "https://devblogs.microsoft.com/blog/github-copilot-dev-days",
+      "published": "2026-03-02T18:00:36.000Z",
+      "summary": "Modern software development is moving fast—and AI is now a practical part of how Microsoft developers design, build, and ship applications every day. From writing code in Visual Studio and VS Code, to building cloud-native apps on Azure, developers are looking for ways to stay productive without…",
+      "blog": "Microsoft DevBlogs",
+      "blogId": "ms-devblogs",
+      "category": "Microsoft",
+      "author": "Katie Savage"
+    },
+    {
+      "title": "GitHub for Beginners: Getting started with GitHub Issues and Projects",
+      "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-issues-and-projects/",
+      "published": "2026-03-02T17:00:00.000Z",
+      "summary": "Learn how to get organized and collaborate more efficiently with this step-by-step tutorial. The post GitHub for Beginners: Getting started with GitHub Issues and Projects appeared first on The GitHub Blog.",
+      "blog": "Developer Skills",
+      "blogId": "github-education",
+      "category": "Community",
+      "author": "Kedasha Kerr"
+    },
+    {
+      "title": "Let it Cook - This changes EVERYTHING",
+      "link": "https://www.youtube.com/watch?v=uquSQY10AGM",
+      "published": "2026-02-28T05:31:43.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "🧜‍♀️ Mermaid diagrams in #vscode",
+      "link": "https://www.youtube.com/shorts/9PFBf95xbeM",
+      "published": "2026-02-27T23:45:00.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "From idea to pull request: A practical guide to building with GitHub Copilot CLI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/",
+      "published": "2026-02-27T16:00:00.000Z",
+      "summary": "A hands-on guide to using GitHub Copilot CLI to move from intent to reviewable changes, and how that work flows naturally into your IDE and GitHub. The post From idea to pull request: A practical guide to building with GitHub Copilot CLI appeared first on The GitHub Blog.",
+      "blog": "AI & ML / Copilot",
+      "blogId": "github-ai",
+      "category": "AI & Copilot",
+      "author": "Ari LiVigni"
+    },
+    {
+      "title": "What’s new with GitHub Copilot coding agent",
+      "link": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
+      "published": "2026-02-26T20:47:02.000Z",
+      "summary": "GitHub Copilot coding agent now includes a model picker, self-review, built-in security scanning, custom agents, and CLI handoff. Here's what's new and how to use it. The post What’s new with GitHub Copilot coding agent appeared first on The GitHub Blog.",
+      "blog": "AI & ML / Copilot",
+      "blogId": "github-ai",
+      "category": "AI & Copilot",
+      "author": "Andrea Griffiths"
+    },
+    {
+      "title": "The New Integrated Browser Has Arrived!",
+      "link": "https://www.youtube.com/shorts/3Cum7Qatiz4",
+      "published": "2026-02-26T13:00:05.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Building Long-Distance Next Edit Suggestions",
+      "link": "https://code.visualstudio.com/blogs/2026/02/26/long-distance-nes",
+      "published": "2026-02-26T00:00:00.000Z",
+      "summary": "Learn how we extended next edit suggestions to work across your entire file, reducing friction and improving productivity in GitHub Copilot. Read the full article",
+      "blog": "VS Code Blog",
+      "blogId": "vscode-blog",
+      "category": "Developer Tools",
+      "author": "Vikram Duvvur, Gaurav Mittal, Benjamin Simmonds"
+    },
+    {
+      "title": "Live coding with Burke and Pierce",
+      "link": "https://www.youtube.com/shorts/WWoAjdmhLUg",
+      "published": "2026-02-25T21:59:02.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Agent Sessions Day Keynote",
+      "link": "https://www.youtube.com/shorts/zgmrPhxZ_pw",
+      "published": "2026-02-25T04:06:11.000Z",
+      "summary": "",
+      "blog": "VS Code YouTube",
+      "blogId": "vscode-youtube",
+      "category": "Videos",
+      "author": "Visual Studio Code"
+    },
+    {
+      "title": "Multi-agent workflows often fail. Here’s how to engineer ones that don’t.",
+      "link": "https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/",
+      "published": "2026-02-24T16:00:00.000Z",
+      "summary": "Most multi-agent workflow failures come down to missing structure, not model capability. Learn the three engineering patterns that make agent systems reliable. The post Multi-agent workflows often fail. Here’s how to engineer ones that don’t. appeared first on The GitHub Blog.",
+      "blog": "AI & ML / Copilot",
+      "blogId": "github-ai",
+      "category": "AI & Copilot",
+      "author": "Gwen Davis"
+    },
+    {
+      "title": "GitHub CLI 2.87.3",
+      "link": "https://github.com/cli/cli/releases/tag/v2.87.3",
+      "published": "2026-02-23T19:12:37.000Z",
+      "summary": "What's Changed Fix project mutation query variable usage by @williammartin in #12757 Full Changelog: v2.87.2...v2.87.3",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "GitHub CLI 2.87.2",
+      "link": "https://github.com/cli/cli/releases/tag/v2.87.2",
+      "published": "2026-02-20T20:38:58.000Z",
+      "summary": "ℹ️ Note This release was cut primarily to resolve a publishing issue. We recommend reviewing the v2.87.1 release notes for the complete set of latest features and fixes. What's Changed chore(deps): bump golang.org/x/crypto from 0.47.0 to 0.48.0 by @dependabot[bot] in #12659 Full Changelog:…",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "GitHub CLI 2.87.1",
+      "link": "https://github.com/cli/cli/releases/tag/v2.87.1",
+      "published": "2026-02-20T20:37:27.000Z",
+      "summary": "⚠️ Incomplete Release The v2.87.1 release experienced a failure in our workflow and is not fully published to the designated package managers/repositories. This is resolved in v2.87.2, so we recommend using that release instead. What's Changed Remove license bundling debris by @williammartin in…",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "How AI is reshaping developer choice (and Octoverse data proves it)",
+      "link": "https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/",
+      "published": "2026-02-19T17:00:00.000Z",
+      "summary": "AI is rewiring developer preferences through convenience loops. Octoverse 2025 reveals how AI compatibility is becoming the new standard for technology choice. The post How AI is reshaping developer choice (and Octoverse data proves it) appeared first on The GitHub Blog.",
+      "blog": "AI & ML / Copilot",
+      "blogId": "github-ai",
+      "category": "AI & Copilot",
+      "author": "Andrea Griffiths"
+    },
+    {
+      "title": "GitHub Desktop 3.5.6-beta1",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.6-beta1",
+      "published": "2026-02-19T12:51:18.000Z",
+      "summary": "New Support adding Copilot as a co author and show avatars for mentionable users - #21634 Fixed Fix detection of IDEs installed from JetBrains Toolbox - #21498 Choose the best account for the current repository to generate commit messages - #21484 Remove trailing $ typo in hooks output - #21638…",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "What to expect for open source in 2026",
+      "link": "https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/",
+      "published": "2026-02-18T18:41:42.000Z",
+      "summary": "Let’s dig into the 2025’s open source data on GitHub to see what we can learn about the future. The post What to expect for open source in 2026 appeared first on The GitHub Blog.",
+      "blog": "Open Source",
+      "blogId": "github-opensource",
+      "category": "Open Source",
+      "author": "Dylan Birtolo"
+    },
+    {
+      "title": "GitHub CLI 2.87.0",
+      "link": "https://github.com/cli/cli/releases/tag/v2.87.0",
+      "published": "2026-02-18T17:31:02.000Z",
+      "summary": "gh workflow run immediately returns workflow run URL One of our most requested features - with the latest changes in GitHub API, gh workflow run will immediately print the created workflow run URL. Improved gh auth login experience in VM/WSL environments We have observed rare cases of time drift…",
+      "blog": "GitHub CLI Releases",
+      "blogId": "github-cli",
+      "category": "Developer Tools",
+      "author": "github-actions[bot]"
+    },
+    {
+      "title": "GitHub Desktop 3.5.5",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.5",
+      "published": "2026-02-18T09:12:26.000Z",
+      "summary": "New Support running hooks in user's shell environment and allow bypassing commit hooks - #21319 Enable one-time opening of a repository in an alternate editor` - #21436. Thanks @jackfreem! Added Add Warp terminal support for Windows - #21471. Thanks @Cocodrulo! \"View Branch on GitHub\" option on…",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Securing the AI software supply chain: Security results across 67 open source projects",
+      "link": "https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/",
+      "published": "2026-02-17T19:00:00.000Z",
+      "summary": "Learn how The GitHub Secure Open Source Fund helped 67 critical AI‑stack projects accelerate fixes, strengthen ecosystems, and advance open source resilience. The post Securing the AI software supply chain: Security results across 67 open source projects appeared first on The GitHub Blog.",
+      "blog": "Open Source",
+      "blogId": "github-opensource",
+      "category": "Open Source",
+      "author": "Gregg Cochran"
+    },
+    {
+      "title": "release-3.5.5-test8",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.5-test8",
+      "published": "2026-02-17T13:02:57.000Z",
+      "summary": "Add changelog for test release",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "GitHub Desktop 3.5.5-beta6",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.5-beta6",
+      "published": "2026-02-17T11:38:27.000Z",
+      "summary": "Improved Locate Git for Windows via PATH and registry - #21621 Include hook exit code in terminal output - #21620",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "release-3.5.5-test7",
+      "link": "https://github.com/desktop/desktop/releases/tag/release-3.5.5-test7",
+      "published": "2026-02-13T17:28:22.000Z",
+      "summary": "Add changelog for test release",
+      "blog": "GitHub Desktop Releases",
+      "blogId": "github-desktop",
+      "category": "Developer Tools",
+      "author": "desktopbot"
+    },
+    {
+      "title": "Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers.",
+      "link": "https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/",
+      "published": "2026-02-12T20:14:11.000Z",
+      "summary": "Open source is hitting an “Eternal September.” As contribution friction drops, maintainers are adapting with new trust signals, triage approaches, and community-led solutions. The post Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers. appeared first on The…",
+      "blog": "Open Source",
+      "blogId": "github-opensource",
+      "category": "Open Source",
+      "author": "Ashley Wolf"
+    },
+    {
+      "title": "GitHub availability report: January 2026",
+      "link": "https://github.blog/news-insights/company-news/github-availability-report-january-2026/",
+      "published": "2026-02-11T23:12:34.000Z",
+      "summary": "In January, we experienced two incidents that resulted in degraded performance across GitHub services. The post GitHub availability report: January 2026 appeared first on The GitHub Blog.",
+      "blog": "News & Insights",
+      "blogId": "github-community",
+      "category": "Community",
+      "author": "Jakub Oleksy"
     }
   ]
 }
