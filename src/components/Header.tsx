@@ -137,7 +137,7 @@ export function Header() {
             placeholder="Search articles ..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="mono h-10 w-full rounded border border-border bg-background pl-8 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
+            className="mono h-10 w-full rounded border border-border bg-background pl-8 pr-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
           />
         </div>
       </div>
