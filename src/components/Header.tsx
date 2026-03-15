@@ -5,12 +5,10 @@ import { useFeed } from "@/context/FeedProvider";
 import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Search, Star, Sun, Moon, Rss, TrendingUp } from "lucide-react";
+import { Search, Star, Sun, Moon, Rss } from "lucide-react";
 
 export function Header() {
   const {
-    filteredArticles,
-    articles,
     searchQuery,
     setSearchQuery,
     showBookmarksOnly,
@@ -51,32 +49,37 @@ export function Header() {
         </div>
 
         {/* Nav items */}
-        <nav className="flex items-center gap-0 mono text-xs uppercase tracking-wider">
+        <nav className="hidden sm:flex items-center gap-0 mono text-xs uppercase tracking-wider">
           <a
             href="https://github.blog/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-2 sm:px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
+            className="px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
           >
             GitHub Blog
           </a>
-          <span className="px-2 sm:px-3 py-3 text-foreground border-b-2 border-terminal-green font-medium">
+          <span className="px-3 py-3 text-foreground border-b-2 border-terminal-green font-medium">
             Feed
           </span>
           <a
             href="https://github.blog/changelog/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-2 sm:px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
+            className="px-3 py-3 text-muted-foreground hover:text-foreground vercel-transition"
           >
             Changelog
           </a>
         </nav>
 
+        {/* Mobile title */}
+        <span className="sm:hidden mono text-xs uppercase tracking-wider text-foreground font-medium">
+          Feed
+        </span>
+
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Search */}
+        {/* Search — single responsive input */}
         <div className="relative hidden sm:block">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
@@ -90,15 +93,6 @@ export function Header() {
           <kbd className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 mono text-xs text-muted-foreground">
             /
           </kbd>
-        </div>
-
-        {/* Stats */}
-        <div className="hidden md:flex items-center gap-1.5 mono text-xs">
-          <TrendingUp className="size-4 text-terminal-green" />
-          <span className="text-muted-foreground">
-            <span className="text-terminal-green">{filteredArticles.length}</span>
-            <span className="text-muted-foreground/50">/{articles.length}</span>
-          </span>
         </div>
 
         {/* Actions */}
@@ -139,7 +133,6 @@ export function Header() {
         <div className="relative">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
-            ref={searchRef}
             type="search"
             placeholder="Search articles ..."
             value={searchQuery}

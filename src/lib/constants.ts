@@ -48,5 +48,4 @@ export const DIGEST_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GI
 /** localStorage keys */
 export const STORAGE_KEYS = {
   BOOKMARKS: "ghfeed-bookmarks",
-  THEME: "ghfeed-theme",
 } as const;
