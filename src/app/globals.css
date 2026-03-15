@@ -152,7 +152,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth overflow-x-hidden;
   }
 }
 
@@ -164,5 +164,13 @@
 
   .vercel-transition {
     transition: all 0.15s ease;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

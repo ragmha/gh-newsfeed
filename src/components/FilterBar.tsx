@@ -3,13 +3,26 @@
 import { useFeed } from "@/context/FeedProvider";
 import { cn } from "@/lib/utils";
 import { CATEGORIES } from "@/lib/categories";
-import type { DateFilter } from "@/lib/types";
+import type { DateFilter, SortOption } from "@/lib/types";
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
 
 const DATE_TABS: { value: DateFilter; label: string }[] = [
   { value: "all", label: "All" },
   { value: "today", label: "Today" },
   { value: "week", label: "7d" },
   { value: "month", label: "30d" },
+];
+
+const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "date-desc", label: "Newest" },
+  { value: "date-asc", label: "Oldest" },
+  { value: "blog", label: "Source" },
 ];
 
 const CATEGORY_NAMES = Object.keys(CATEGORIES);
@@ -21,13 +34,15 @@ export function FilterBar() {
     setCurrentCategory,
     dateFilter,
     setDateFilter,
+    sortBy,
+    setSortBy,
   } = useFeed();
 
   return (
-    <div className="border-b border-border bg-card/50">
-      <div className="flex flex-col sm:flex-row sm:items-center px-3 sm:px-4">
+    <div className="border-b border-border bg-card/50 overflow-hidden">
+      <div className="flex flex-col sm:flex-row sm:items-center px-3 sm:px-4 min-w-0">
         {/* Category tabs */}
-        <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider overflow-x-auto">
+        <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider overflow-x-auto scrollbar-hide min-w-0">
           <button
             onClick={() => setCurrentCategory(null)}
             aria-current={!currentCategory ? "true" : undefined}
@@ -63,7 +78,7 @@ export function FilterBar() {
         <div className="hidden sm:block flex-1" />
 
         {/* Date range + count */}
-        <div className="flex items-center gap-0 mono text-xs">
+        <div className="flex items-center gap-0 mono text-xs overflow-x-auto scrollbar-hide">
           {DATE_TABS.map((tab) => (
             <button
               key={tab.value}
@@ -82,6 +97,21 @@ export function FilterBar() {
           <span role="status" className="pl-3 text-muted-foreground tabular-nums">
             {filteredArticles.length} results
           </span>
+          <Select
+            value={sortBy}
+            onValueChange={(v) => setSortBy(v as SortOption)}
+          >
+            <SelectTrigger size="sm" className="ml-2 w-24 rounded border-border bg-secondary text-xs shrink-0">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {SORT_OPTIONS.map((opt) => (
+                <SelectItem key={opt.value} value={opt.value}>
+                  {opt.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>

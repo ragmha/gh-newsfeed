@@ -64,12 +64,12 @@ export function Pagination() {
       </p>
 
       {/* Controls */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 flex-wrap justify-center">
         {/* First */}
         <Button
           variant="ghost"
           size="icon"
-          className="size-8"
+          className="size-8 hidden sm:inline-flex"
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(1)}
           aria-label="First page"
@@ -89,29 +89,36 @@ export function Pagination() {
           <ChevronLeft className="size-4" />
         </Button>
 
-        {/* Page numbers */}
-        {pages.map((page, i) =>
-          page === "..." ? (
-            <span
-              key={`ellipsis-${i}`}
-              className="mono text-xs text-muted-foreground px-1 select-none"
-            >
-              &hellip;
-            </span>
-          ) : (
-            <Button
-              key={page}
-              variant={page === currentPage ? "default" : "ghost"}
-              size="icon"
-              className="size-8 mono text-xs"
-              onClick={() => setCurrentPage(page)}
-              aria-label={`Page ${page}`}
-              aria-current={page === currentPage ? "page" : undefined}
-            >
-              {page}
-            </Button>
-          ),
-        )}
+        {/* Page numbers (hidden on mobile to prevent overflow) */}
+        <span className="hidden sm:contents">
+          {pages.map((page, i) =>
+            page === "..." ? (
+              <span
+                key={`ellipsis-${i}`}
+                className="mono text-xs text-muted-foreground px-1 select-none"
+              >
+                &hellip;
+              </span>
+            ) : (
+              <Button
+                key={page}
+                variant={page === currentPage ? "default" : "ghost"}
+                size="icon"
+                className="size-8 mono text-xs"
+                onClick={() => setCurrentPage(page)}
+                aria-label={`Page ${page}`}
+                aria-current={page === currentPage ? "page" : undefined}
+              >
+                {page}
+              </Button>
+            ),
+          )}
+        </span>
+
+        {/* Mobile: page indicator between arrows */}
+        <span className="sm:hidden mono text-xs text-muted-foreground px-2">
+          {currentPage}/{totalPages}
+        </span>
 
         {/* Next */}
         <Button
@@ -129,7 +136,7 @@ export function Pagination() {
         <Button
           variant="ghost"
           size="icon"
-          className="size-8"
+          className="size-8 hidden sm:inline-flex"
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage(totalPages)}
           aria-label="Last page"

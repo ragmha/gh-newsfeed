@@ -2,7 +2,7 @@
 
 import type { Article } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR, BLOG_TAG_COLORS } from "@/lib/constants";
+import { BLOG_TAG_COLORS } from "@/lib/constants";
 import { Star, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
@@ -23,14 +23,6 @@ function timeAgo(published: string): string {
   });
 }
 
-function getDomain(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, "");
-  } catch {
-    return "";
-  }
-}
-
 function formatDate(published: string): string {
   return new Date(published).toLocaleDateString("en-US", {
     month: "2-digit",
@@ -47,7 +39,6 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: ArticleCardProps) {
-  const domain = getDomain(article.link);
   const ago = timeAgo(article.published);
   const date = formatDate(article.published);
 
@@ -68,20 +59,7 @@ export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: Ar
     )}>
       {/* Desktop: single row layout */}
       <div className="hidden sm:flex items-center gap-0 mono text-sm">
-        <span className="w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
-          {index + 1}
-        </span>
-
-        <span className="shrink-0 py-3 pl-0.5 w-28">
-          <span className={cn(
-            "inline-block rounded border px-2 py-0.5 text-xs font-medium truncate",
-            CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
-          )}>
-            {article.category || "General"}
-          </span>
-        </span>
-
-        <div className="flex-1 min-w-0 py-3 pr-3">
+        <div className="flex-1 min-w-0 py-3 pl-3 pr-3">
           <a
             href={article.link}
             target="_blank"
@@ -93,11 +71,6 @@ export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: Ar
             </span>
             <ExternalLink className="size-3 shrink-0 text-muted-foreground/40 opacity-0 group-hover/link:opacity-100 vercel-transition" />
           </a>
-          {domain && (
-            <span className="ml-2 text-xs text-muted-foreground/50">
-              {domain}
-            </span>
-          )}
         </div>
 
         <span className={cn(
@@ -108,15 +81,11 @@ export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: Ar
         </span>
 
         <span className="w-28 shrink-0 truncate text-xs text-muted-foreground py-3 hidden md:block">
-          {article.author || "—"}
+          {article.author || "\u2014"}
         </span>
 
-        <span className="w-16 shrink-0 tabular-nums text-muted-foreground py-3 text-right">
+        <span className="w-20 shrink-0 tabular-nums text-muted-foreground py-3 text-right" title={date}>
           {ago}
-        </span>
-
-        <span className="w-24 shrink-0 text-right tabular-nums text-muted-foreground py-3">
-          {date}
         </span>
 
         <div className="w-10 shrink-0 flex justify-center py-3">
@@ -135,12 +104,13 @@ export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: Ar
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1.5 mb-1">
             <span className={cn(
-              "inline-block rounded border px-1.5 py-0.5 text-xs font-medium shrink-0",
-              CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
+              "text-xs shrink-0",
+              BLOG_TAG_COLORS[article.blogId] || "text-muted-foreground",
             )}>
-              {article.category || "General"}
+              {article.blog}
             </span>
-            <span className="text-muted-foreground tabular-nums">{ago}</span>
+            <span className="text-muted-foreground/40">&middot;</span>
+            <span className="text-muted-foreground tabular-nums" title={date}>{ago}</span>
           </div>
           <a
             href={article.link}

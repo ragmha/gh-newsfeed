@@ -1,17 +1,3 @@
-/** Category badge colors (bg + text + border) */
-export const CATEGORY_COLORS: Record<string, string> = {
-  Platform: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  Engineering: "bg-orange-500/20 text-orange-400 border-orange-500/30",
-  Security: "bg-red-500/20 text-red-400 border-red-500/30",
-  "AI & Copilot": "bg-violet-500/20 text-violet-400 border-violet-500/30",
-  "Open Source": "bg-teal-500/20 text-teal-400 border-teal-500/30",
-  Community: "bg-pink-500/20 text-pink-400 border-pink-500/30",
-  "Developer Tools": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-  Microsoft: "bg-sky-500/20 text-sky-400 border-sky-500/30",
-  Videos: "bg-rose-500/20 text-rose-400 border-rose-500/30",
-};
-export const DEFAULT_CATEGORY_COLOR = "bg-gray-500/20 text-gray-400 border-gray-500/30";
-
 /** Blog source text colors (used in table rows) */
 export const BLOG_TAG_COLORS: Record<string, string> = {
   "github-blog": "text-blue-400",
