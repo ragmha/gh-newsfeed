@@ -1,7 +1,6 @@
 "use client";
 
 import type { Article } from "@/lib/types";
-import { useFeed } from "@/context/FeedProvider";
 import { cn } from "@/lib/utils";
 import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR, BLOG_TAG_COLORS } from "@/lib/constants";
 import { Star, ExternalLink } from "lucide-react";
@@ -43,11 +42,11 @@ function formatDate(published: string): string {
 interface ArticleCardProps {
   article: Article;
   index: number;
+  bookmarked: boolean;
+  onToggleBookmark: (link: string) => void;
 }
 
-export function ArticleCard({ article, index }: ArticleCardProps) {
-  const { toggleBookmark, isBookmarked } = useFeed();
-  const bookmarked = isBookmarked(article.link);
+export function ArticleCard({ article, index, bookmarked, onToggleBookmark }: ArticleCardProps) {
   const domain = getDomain(article.link);
   const ago = timeAgo(article.published);
   const date = formatDate(article.published);
@@ -55,7 +54,7 @@ export function ArticleCard({ article, index }: ArticleCardProps) {
   function handleBookmark(e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    toggleBookmark(article.link);
+    onToggleBookmark(article.link);
     toast(bookmarked ? "Bookmark removed" : "Bookmark added", {
       description: article.title,
       duration: 2000,

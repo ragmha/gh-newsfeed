@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback } from "react";
 import { useFeed } from "@/context/FeedProvider";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -27,7 +28,11 @@ function SkeletonTable() {
 // ---- main component --------------------------------------------------------
 
 export function ArticlesGrid() {
-  const { filteredArticles, paginatedArticles, currentPage, loading, error } = useFeed();
+  const { filteredArticles, paginatedArticles, currentPage, loading, error, isBookmarked, toggleBookmark } = useFeed();
+
+  const handleToggleBookmark = useCallback((link: string) => {
+    toggleBookmark(link);
+  }, [toggleBookmark]);
 
   if (loading) {
     return <SkeletonTable />;
@@ -71,7 +76,13 @@ export function ArticlesGrid() {
 
       {/* Rows */}
       {paginatedArticles.map((article, i) => (
-        <ArticleCard key={article.link} article={article} index={i + (currentPage - 1) * ARTICLES_PER_PAGE} />
+        <ArticleCard
+          key={article.link}
+          article={article}
+          index={i + (currentPage - 1) * ARTICLES_PER_PAGE}
+          bookmarked={isBookmarked(article.link)}
+          onToggleBookmark={handleToggleBookmark}
+        />
       ))}
     </div>
   );

@@ -15,7 +15,7 @@ interface DigestState {
 
 export function AISummary() {
   const [digest, setDigest] = useState<DigestState>({
-    loading: true,
+    loading: false,
     title: null,
     body: null,
     error: false,
@@ -25,6 +25,7 @@ export function AISummary() {
     let cancelled = false;
 
     async function fetchDigest() {
+      if (!cancelled) setDigest((prev) => ({ ...prev, loading: true }));
       try {
         const res = await fetch(DIGEST_API_URL);
 

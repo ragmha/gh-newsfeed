@@ -64,11 +64,10 @@ const FeedContext = createContext<FeedContextValue | null>(null);
 // Helper: date‑range filter
 // ---------------------------------------------------------------------------
 
-export function isWithinDateRange(published: string, filter: DateFilter): boolean {
+export function isWithinDateRange(published: string, filter: DateFilter, now = new Date()): boolean {
   if (filter === "all") return true;
 
   const date = new Date(published);
-  const now = new Date();
 
   switch (filter) {
     case "today": {
@@ -95,23 +94,18 @@ export function isWithinDateRange(published: string, filter: DateFilter): boolea
 // ---------------------------------------------------------------------------
 
 export function sortArticles(articles: Article[], sortBy: SortOption): Article[] {
-  const sorted = [...articles];
-  switch (sortBy) {
-    case "date-desc":
-      return sorted.sort(
-        (a, b) =>
-          new Date(b.published).getTime() - new Date(a.published).getTime(),
-      );
-    case "date-asc":
-      return sorted.sort(
-        (a, b) =>
-          new Date(a.published).getTime() - new Date(b.published).getTime(),
-      );
-    case "blog":
-      return sorted.sort((a, b) => a.blog.localeCompare(b.blog));
-    default:
-      return sorted;
+  if (sortBy === "blog") {
+    return [...articles].sort((a, b) => a.blog.localeCompare(b.blog));
   }
+  if (sortBy === "date-asc" || sortBy === "date-desc") {
+    const timestamps = new Map<Article, number>();
+    for (const a of articles) {
+      timestamps.set(a, new Date(a.published).getTime());
+    }
+    const dir = sortBy === "date-desc" ? -1 : 1;
+    return [...articles].sort((a, b) => dir * (timestamps.get(a)! - timestamps.get(b)!));
+  }
+  return [...articles];
 }
 
 // ---------------------------------------------------------------------------
@@ -210,7 +204,10 @@ export function FeedProvider({ children }: { children: ReactNode }) {
     }
 
     // 4. Date range
-    result = result.filter((a) => isWithinDateRange(a.published, dateFilter));
+    if (dateFilter !== "all") {
+      const now = new Date();
+      result = result.filter((a) => isWithinDateRange(a.published, dateFilter, now));
+    }
 
     // 5. Bookmarks only
     if (showBookmarksOnly) {

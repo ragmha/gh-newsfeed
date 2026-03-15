@@ -9,16 +9,3 @@ export const CATEGORIES: Record<string, string[]> = {
   Microsoft: ["ms-devblogs", "ms-learn"],
   Videos: ["github-youtube", "vscode-youtube"],
 };
-
-/** Reverse lookup: blogId → category name */
-export const BLOG_TO_CATEGORY: Record<string, string> = Object.entries(
-  CATEGORIES,
-).reduce(
-  (acc, [category, blogIds]) => {
-    for (const id of blogIds) {
-      acc[id] = category;
-    }
-    return acc;
-  },
-  {} as Record<string, string>,
-);

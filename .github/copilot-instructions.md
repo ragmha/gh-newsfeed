@@ -39,7 +39,7 @@ src/
 │   └── useDebounce.ts      # Generic debounce
 └── lib/
     ├── types.ts            # Article, FeedData, SortOption, DateFilter
-    ├── categories.ts       # CATEGORIES map, BLOG_TO_CATEGORY reverse lookup
+    ├── categories.ts       # CATEGORIES map
     └── constants.ts        # CATEGORY_COLORS, BLOG_TAG_COLORS, STORAGE_KEYS, FEED_DATA_PATH
     └── utils.ts            # cn() utility from shadcn
 
