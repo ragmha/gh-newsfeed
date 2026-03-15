@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ragmha.github.io/gh-newsfeed/sitemap.xml

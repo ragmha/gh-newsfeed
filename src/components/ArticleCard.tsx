@@ -40,12 +40,12 @@ function formatDate(published: string): string {
   });
 }
 
-interface ArticleRowProps {
+interface ArticleCardProps {
   article: Article;
   index: number;
 }
 
-export function ArticleRow({ article, index }: ArticleRowProps) {
+export function ArticleCard({ article, index }: ArticleCardProps) {
   const { toggleBookmark, isBookmarked } = useFeed();
   const bookmarked = isBookmarked(article.link);
   const domain = getDomain(article.link);
@@ -64,73 +64,98 @@ export function ArticleRow({ article, index }: ArticleRowProps) {
 
   return (
     <div className={cn(
-      "group flex items-center gap-1.5 sm:gap-0 mono text-xs sm:text-sm border-b border-border vercel-transition hover:bg-secondary/60",
+      "group border-b border-border vercel-transition hover:bg-secondary/60",
       index % 2 !== 0 && "bg-card/30",
     )}>
-      {/* Index — hidden on mobile */}
-      <span className="hidden sm:block w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
-        {index + 1}
-      </span>
-
-      {/* Category tag — compact on mobile */}
-      <span className="shrink-0 py-2.5 sm:py-3 pl-3 sm:pl-0.5 sm:w-28">
-        <span className={cn(
-          "inline-block rounded border px-1.5 sm:px-2 py-0.5 text-xs font-medium truncate max-w-20 sm:max-w-full",
-          CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
-        )}>
-          {article.category || "General"}
+      {/* Desktop: single row layout */}
+      <div className="hidden sm:flex items-center gap-0 mono text-sm">
+        <span className="w-10 shrink-0 text-center tabular-nums text-muted-foreground py-3">
+          {index + 1}
         </span>
-      </span>
 
-      {/* Title + domain */}
-      <div className="flex-1 min-w-0 py-2.5 sm:py-3 pr-2 sm:pr-3">
-        <a
-          href={article.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/link inline-flex items-center gap-1.5 min-w-0"
-        >
-          <span className="font-medium text-foreground truncate vercel-transition group-hover/link:text-terminal-green">
-            {article.title}
+        <span className="shrink-0 py-3 pl-0.5 w-28">
+          <span className={cn(
+            "inline-block rounded border px-2 py-0.5 text-xs font-medium truncate",
+            CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
+          )}>
+            {article.category || "General"}
           </span>
-          <ExternalLink className="size-3 shrink-0 text-muted-foreground/40 opacity-0 group-hover/link:opacity-100 vercel-transition hidden sm:inline-block" />
-        </a>
-        {domain && (
-          <span className="ml-2 text-xs text-muted-foreground/50 hidden sm:inline">
-            {domain}
-          </span>
-        )}
+        </span>
+
+        <div className="flex-1 min-w-0 py-3 pr-3">
+          <a
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/link inline-flex items-center gap-1.5 min-w-0"
+          >
+            <span className="font-medium text-foreground truncate vercel-transition group-hover/link:text-terminal-green">
+              {article.title}
+            </span>
+            <ExternalLink className="size-3 shrink-0 text-muted-foreground/40 opacity-0 group-hover/link:opacity-100 vercel-transition" />
+          </a>
+          {domain && (
+            <span className="ml-2 text-xs text-muted-foreground/50">
+              {domain}
+            </span>
+          )}
+        </div>
+
+        <span className={cn(
+          "w-32 shrink-0 truncate text-xs py-3 hidden lg:block",
+          BLOG_TAG_COLORS[article.blogId] || "text-muted-foreground",
+        )}>
+          {article.blog}
+        </span>
+
+        <span className="w-28 shrink-0 truncate text-xs text-muted-foreground py-3 hidden md:block">
+          {article.author || "—"}
+        </span>
+
+        <span className="w-16 shrink-0 tabular-nums text-muted-foreground py-3 text-right">
+          {ago}
+        </span>
+
+        <span className="w-24 shrink-0 text-right tabular-nums text-muted-foreground py-3">
+          {date}
+        </span>
+
+        <div className="w-10 shrink-0 flex justify-center py-3">
+          <button
+            onClick={handleBookmark}
+            aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
+            className="text-muted-foreground vercel-transition hover:text-terminal-yellow"
+          >
+            <Star className={cn("size-4", bookmarked && "fill-terminal-yellow text-terminal-yellow")} />
+          </button>
+        </div>
       </div>
 
-      {/* Blog source tag */}
-      <span className={cn(
-        "w-32 shrink-0 truncate text-xs py-3 hidden lg:block",
-        BLOG_TAG_COLORS[article.blogId] || "text-muted-foreground",
-      )}>
-        {article.blog}
-      </span>
-
-      {/* Author */}
-      <span className="w-28 shrink-0 truncate text-xs text-muted-foreground py-3 hidden md:block">
-        {article.author || "—"}
-      </span>
-
-      {/* Time */}
-      <span className="shrink-0 tabular-nums text-muted-foreground py-2.5 sm:py-3 text-right sm:w-16">
-        {ago}
-      </span>
-
-      {/* Date — hidden on mobile */}
-      <span className="w-24 shrink-0 text-right tabular-nums text-muted-foreground py-3 hidden sm:block">
-        {date}
-      </span>
-
-      {/* Bookmark */}
-      <div className="shrink-0 flex justify-center py-2.5 sm:py-3 pr-2 sm:pr-0 sm:w-10">
+      {/* Mobile: stacked layout */}
+      <div className="sm:hidden flex items-start gap-2 px-3 py-2.5 mono text-xs">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className={cn(
+              "inline-block rounded border px-1.5 py-0.5 text-xs font-medium shrink-0",
+              CATEGORY_COLORS[article.category] || DEFAULT_CATEGORY_COLOR,
+            )}>
+              {article.category || "General"}
+            </span>
+            <span className="text-muted-foreground tabular-nums">{ago}</span>
+          </div>
+          <a
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground leading-snug line-clamp-2 vercel-transition hover:text-terminal-green"
+          >
+            {article.title}
+          </a>
+        </div>
         <button
           onClick={handleBookmark}
           aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
-          className="text-muted-foreground vercel-transition hover:text-terminal-yellow"
+          className="shrink-0 mt-1 text-muted-foreground vercel-transition hover:text-terminal-yellow"
         >
           <Star className={cn("size-4", bookmarked && "fill-terminal-yellow text-terminal-yellow")} />
         </button>

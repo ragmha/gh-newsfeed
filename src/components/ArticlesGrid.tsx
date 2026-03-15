@@ -1,7 +1,7 @@
 "use client";
 
 import { useFeed } from "@/context/FeedProvider";
-import { ArticleRow } from "@/components/ArticleCard";
+import { ArticleCard } from "@/components/ArticleCard";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle, Inbox } from "lucide-react";
 import { ARTICLES_PER_PAGE } from "@/lib/constants";
@@ -71,7 +71,7 @@ export function ArticlesGrid() {
 
       {/* Rows */}
       {paginatedArticles.map((article, i) => (
-        <ArticleRow key={article.link} article={article} index={i + (currentPage - 1) * ARTICLES_PER_PAGE} />
+        <ArticleCard key={article.link} article={article} index={i + (currentPage - 1) * ARTICLES_PER_PAGE} />
       ))}
     </div>
   );

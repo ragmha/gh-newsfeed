@@ -30,6 +30,7 @@ export function FilterBar() {
         <div className="flex items-center gap-0 mono text-xs uppercase tracking-wider overflow-x-auto">
           <button
             onClick={() => setCurrentCategory(null)}
+            aria-current={!currentCategory ? "true" : undefined}
             className={cn(
               "shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition",
               !currentCategory
@@ -45,6 +46,7 @@ export function FilterBar() {
               onClick={() =>
                 setCurrentCategory(currentCategory === name ? null : name)
               }
+              aria-current={currentCategory === name ? "true" : undefined}
               className={cn(
                 "shrink-0 px-2.5 sm:px-3 py-2.5 border-b-2 vercel-transition",
                 currentCategory === name
@@ -66,6 +68,7 @@ export function FilterBar() {
             <button
               key={tab.value}
               onClick={() => setDateFilter(tab.value)}
+              aria-current={dateFilter === tab.value ? "true" : undefined}
               className={cn(
                 "px-2.5 py-2.5 border-b-2 vercel-transition",
                 dateFilter === tab.value
@@ -76,7 +79,7 @@ export function FilterBar() {
               {tab.label}
             </button>
           ))}
-          <span className="pl-3 text-muted-foreground tabular-nums">
+          <span role="status" className="pl-3 text-muted-foreground tabular-nums">
             {filteredArticles.length} results
           </span>
         </div>
