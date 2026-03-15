@@ -64,7 +64,7 @@ const FeedContext = createContext<FeedContextValue | null>(null);
 // Helper: date‑range filter
 // ---------------------------------------------------------------------------
 
-function isWithinDateRange(published: string, filter: DateFilter): boolean {
+export function isWithinDateRange(published: string, filter: DateFilter): boolean {
   if (filter === "all") return true;
 
   const date = new Date(published);
@@ -94,7 +94,7 @@ function isWithinDateRange(published: string, filter: DateFilter): boolean {
 // Helper: sort comparator
 // ---------------------------------------------------------------------------
 
-function sortArticles(articles: Article[], sortBy: SortOption): Article[] {
+export function sortArticles(articles: Article[], sortBy: SortOption): Article[] {
   const sorted = [...articles];
   switch (sortBy) {
     case "date-desc":

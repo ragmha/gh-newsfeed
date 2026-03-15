@@ -14,7 +14,7 @@ export function Header() {
     showBookmarksOnly,
     setShowBookmarksOnly,
   } = useFeed();
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export function Header() {
             aria-label="Toggle theme"
             className="size-8 rounded text-muted-foreground hover:text-foreground hover:bg-secondary"
           >
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            {mounted ? (theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />) : <Sun className="size-4" />}
           </Button>
           <a
             href="/data/feed.xml"
