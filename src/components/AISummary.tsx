@@ -4,10 +4,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Bot } from "lucide-react";
-
-const GITHUB_OWNER = "gh-newsfeed";
-const GITHUB_REPO = "gh-newsfeed";
-const DIGEST_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues?labels=daily-digest&state=open&per_page=1&sort=created&direction=desc`;
+import { DIGEST_API_URL } from "@/lib/constants";
 
 interface DigestState {
   loading: boolean;

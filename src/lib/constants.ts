@@ -38,6 +38,13 @@ export const FEED_DATA_PATH =
 /** Number of articles per page */
 export const ARTICLES_PER_PAGE = 30;
 
+/** GitHub repo coordinates */
+export const GITHUB_OWNER = "ragmha";
+export const GITHUB_REPO = "gh-newsfeed";
+
+/** Daily-digest issue API URL */
+export const DIGEST_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues?labels=daily-digest&state=open&per_page=1&sort=created&direction=desc`;
+
 /** localStorage keys */
 export const STORAGE_KEYS = {
   BOOKMARKS: "ghfeed-bookmarks",
