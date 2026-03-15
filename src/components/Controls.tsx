@@ -25,7 +25,7 @@ export function Controls() {
         value={sortBy}
         onValueChange={(v) => setSortBy(v as SortOption)}
       >
-        <SelectTrigger size="sm" className="w-[140px] rounded-md border-border bg-secondary text-xs">
+        <SelectTrigger size="sm" className="w-35 rounded-md border-border bg-secondary text-xs">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent>

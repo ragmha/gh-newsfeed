@@ -40,7 +40,7 @@ src/
 └── lib/
     ├── types.ts            # Article, FeedData, SortOption, DateFilter
     ├── categories.ts       # CATEGORIES map, BLOG_TO_CATEGORY reverse lookup
-    ├── constants.ts        # BLOG_COLORS, STORAGE_KEYS, FEED_DATA_PATH
+    └── constants.ts        # CATEGORY_COLORS, BLOG_TAG_COLORS, STORAGE_KEYS, FEED_DATA_PATH
     └── utils.ts            # cn() utility from shadcn
 
 scripts/
@@ -86,7 +86,7 @@ scripts/
 ## Adding New Feed Sources
 1. Add entry to `FEEDS` object in `scripts/fetch-feeds.ts`
 2. Add blogId to appropriate category in `src/lib/categories.ts`
-3. Add color mapping in `src/lib/constants.ts` → `BLOG_COLORS`
+3. Add color mapping in `src/lib/constants.ts` → `BLOG_TAG_COLORS`
 
 ## Running Locally
 ```bash

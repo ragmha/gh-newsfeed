@@ -10,9 +10,6 @@ export const CATEGORIES: Record<string, string[]> = {
   Videos: ["github-youtube", "vscode-youtube"],
 };
 
-/** All known blog IDs derived from CATEGORIES */
-export const ALL_BLOG_IDS = Object.values(CATEGORIES).flat();
-
 /** Reverse lookup: blogId → category name */
 export const BLOG_TO_CATEGORY: Record<string, string> = Object.entries(
   CATEGORIES,

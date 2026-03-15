@@ -95,9 +95,8 @@ export function AISummary() {
           </div>
         </CardHeader>
         <CardContent>
-          {/* Rendered as plain text — React auto-escapes. Never use dangerouslySetInnerHTML with external content. */}
           <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
-            {typeof digest.body === "string" ? digest.body : ""}
+            {digest.body}
           </p>
         </CardContent>
       </Card>

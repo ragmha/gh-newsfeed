@@ -16,9 +16,9 @@ Add a new RSS/Atom feed source to the GitHub Feed aggregator.
    ```typescript
    "Category Name": ["existing-blog", "new-blog-id"],
    ```
-3. Open `src/lib/constants.ts` and add a color for the new blog in `BLOG_COLORS`:
+3. Open `src/lib/constants.ts` and add a text color for the new blog in `BLOG_TAG_COLORS`:
    ```typescript
-   "new-blog-id": "#hexcolor",
+   "new-blog-id": "text-color-400",
    ```
 4. Test by running: `bunx tsx scripts/fetch-feeds.ts`
 5. Verify the new feed appears in the UI: `bun run dev`

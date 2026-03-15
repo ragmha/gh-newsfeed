@@ -158,11 +158,6 @@
 
 /* ─── Utilities ─── */
 @layer utilities {
-  .surface-elevated {
-    background-color: var(--card);
-    border: 1px solid var(--border);
-  }
-
   .mono {
     font-family: var(--font-geist-mono), ui-monospace, monospace;
   }

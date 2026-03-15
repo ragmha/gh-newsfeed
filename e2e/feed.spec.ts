@@ -299,4 +299,61 @@ test.describe("GitHub Feed", () => {
 
     await context.close();
   });
+
+  test("pagination navigates between pages", async ({ page }) => {
+    // Generate 35 articles to trigger pagination (ARTICLES_PER_PAGE = 30)
+    const now = new Date();
+    const articles = Array.from({ length: 35 }, (_, i) => ({
+      title: `Article ${String(i + 1).padStart(2, "0")}`,
+      link: `https://example.com/article-${i + 1}`,
+      published: new Date(now.getTime() - i * 3600_000).toISOString(),
+      summary: `Summary for article ${i + 1}`,
+      blog: "GitHub Blog",
+      blogId: "github-blog",
+      category: "Platform",
+      author: "Test Author",
+    }));
+
+    await page.route("**/data/feeds.json", (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          lastUpdated: now.toISOString(),
+          totalArticles: articles.length,
+          articles,
+        }),
+      }),
+    );
+    await blockDigestAPI(page);
+    await page.goto("/");
+    await expect(page.getByText("Article 01")).toBeVisible();
+
+    // Should show pagination info "1–30 of 35"
+    await expect(page.getByText(/1.30 of 35/)).toBeVisible();
+
+    // Article 31 should NOT be on page 1
+    await expect(page.getByText("Article 31")).not.toBeVisible();
+
+    // Navigate to page 2
+    await page.getByRole("button", { name: "Next page" }).click();
+
+    // Now page 2 articles should be visible (31-35)
+    await expect(page.getByText("Article 31")).toBeVisible();
+    await expect(page.getByText(/31.35 of 35/)).toBeVisible();
+
+    // Article 01 should NOT be on page 2
+    await expect(page.getByText("Article 01")).not.toBeVisible();
+
+    // Navigate back to page 1
+    await page.getByRole("button", { name: "Previous page" }).click();
+    await expect(page.getByText("Article 01")).toBeVisible();
+
+    // First/Last page buttons
+    await page.getByRole("button", { name: "Last page" }).click();
+    await expect(page.getByText("Article 31")).toBeVisible();
+
+    await page.getByRole("button", { name: "First page" }).click();
+    await expect(page.getByText("Article 01")).toBeVisible();
+  });
 });
