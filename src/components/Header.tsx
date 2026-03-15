@@ -38,9 +38,14 @@ export function Header() {
 
   return (
     <header className="border-b border-border bg-card">
-      <div className="flex items-center h-10 sm:h-12 px-3 sm:px-4 gap-2 sm:gap-3">
-        {/* Logo */}
-        <div className="flex items-center gap-2 shrink-0">
+      <div className="flex items-center h-12 sm:h-12 px-4 sm:px-4 gap-3">
+        {/* Mobile: bold title */}
+        <h1 className="sm:hidden text-lg font-semibold text-foreground">
+          Feed
+        </h1>
+
+        {/* Desktop: Logo */}
+        <div className="hidden sm:flex items-center gap-2 shrink-0">
           <div className="flex items-center gap-1.5">
             <div className="size-2.5 rounded-full bg-terminal-red" />
             <div className="size-2.5 rounded-full bg-terminal-yellow" />
@@ -48,7 +53,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Nav items */}
+        {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-0 mono text-xs uppercase tracking-wider">
           <a
             href="https://github.blog/"
@@ -70,11 +75,6 @@ export function Header() {
             Changelog
           </a>
         </nav>
-
-        {/* Mobile title */}
-        <span className="sm:hidden mono text-xs uppercase tracking-wider text-foreground font-medium">
-          Feed
-        </span>
 
         {/* Spacer */}
         <div className="flex-1" />
@@ -128,16 +128,16 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile search */}
-      <div className="sm:hidden px-3 pb-2">
+      {/* Mobile search — pill-shaped like Threads */}
+      <div className="sm:hidden px-4 pb-3">
         <div className="relative">
-          <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
             type="search"
-            placeholder="Search articles ..."
+            placeholder="Search ..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="mono h-10 w-full rounded border border-border bg-background pl-8 pr-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
+            className="h-9 w-full rounded-full border border-border bg-secondary/50 pl-9 pr-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-terminal-green vercel-transition"
           />
         </div>
       </div>
