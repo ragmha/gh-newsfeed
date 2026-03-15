@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme as useNextTheme } from "next-themes";
+
+const subscribe = () => () => {};
+function getSnapshot() { return true; }
+function getServerSnapshot() { return false; }
 
 export function useTheme() {
   const { resolvedTheme, setTheme } = useNextTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const theme = (mounted ? resolvedTheme ?? "light" : "light") as "light" | "dark";
 
